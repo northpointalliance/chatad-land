@@ -1,0 +1,14 @@
+title: ChatAd Land
+description: Insights into SEO, GEO, and AEO.
+baseurl: "" # Leave this empty
+url: "" # We will add your domain here later
+
+# This tells Jekyll how to handle your posts
+permalink: /:title/
+markdown: kramdown
+
+# This helps Cloudflare ignore things it doesn't need
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules

@@ -1,12 +1,17 @@
 ---
 layout: default
-title: ChatAd Land Home
+title: ChatAd Land | SEO & AEO Strategy
 ---
 
 # Latest Strategy Insights
-Welcome to the new ChatAd Land. Below you will find our latest deep-dives into SEO, GEO, and AEO.
+Welcome to ChatAd Land. Below are our latest deep-dives into the generative era of search.
 
-{% for post in site.posts %}
-  ### [{{ post.title }}]({{ post.url }})
-  *{{ post.date | date_to_string }}* — {{ post.summary }}
-{% endfor %}
+<div class="article-list">
+  {% for post in site.posts %}
+    <article style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1rem;">
+      <h3><a href="{{ site.baseurl }}{{ post.url }}" style="color: #007bff; text-decoration: none;">{{ post.title }}</a></h3>
+      <p style="font-size: 0.9rem; color: #666;">{{ post.date | date: "%B %d, %Y" }}</p>
+      <p>{{ post.summary }}</p>
+    </article>
+  {% endfor %}
+</div>

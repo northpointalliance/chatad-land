@@ -17,6 +17,143 @@
         .aeo-summary { background: #f0f7ff; border-left: 5px solid var(--blue); padding: 1rem; margin: 1rem 0; font-size: 0.9rem; }
         .sidebar-box { background: #fff; padding: 1.5rem; border: 1px solid #ddd; margin-bottom: 1.5rem; }
         .israelileads-btn { background: var(--navy); color: white; padding: 10px; display: block; text-align: center; text-decoration: none; font-weight: bold; margin-top: 10px; }
+
+        /* RSS FEED SECTION */
+        .news-section { max-width: 1200px; margin: 0 auto 3rem; padding: 0 5%; }
+        .news-section h2 { font-size: 1.3rem; font-weight: 900; color: var(--navy); border-bottom: 3px solid var(--navy); padding-bottom: 0.5rem; margin-bottom: 1.5rem; }
+
+        .feed-tabs { display: flex; gap: 0; margin-bottom: 0; border-bottom: 2px solid #ddd; }
+        .feed-tab {
+            padding: 0.6rem 1.2rem;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 0.85rem;
+            color: #666;
+            border: 1px solid #ddd;
+            border-bottom: none;
+            background: #f4f4f4;
+            margin-right: 4px;
+            border-radius: 4px 4px 0 0;
+            transition: all 0.15s;
+        }
+        .feed-tab.active { background: #fff; color: var(--navy); border-color: #ddd; border-bottom: 2px solid #fff; margin-bottom: -2px; }
+        .feed-tab:hover:not(.active) { background: #e8e8e8; }
+
+        .feed-panel { display: none; background: #fff; border: 1px solid #ddd; border-top: none; }
+        .feed-panel.active { display: block; }
+
+        .feed-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 0.9rem 1.2rem;
+            border-bottom: 1px solid #f0f0f0;
+            gap: 1rem;
+        }
+        .feed-item:last-child { border-bottom: none; }
+        .feed-item a { color: var(--text); text-decoration: none; font-size: 0.9rem; font-weight: 600; line-height: 1.4; flex: 1; }
+        .feed-item a:hover { color: var(--blue); }
+        .feed-meta { font-size: 0.75rem; color: #888; white-space: nowrap; text-align: right; }
+        .feed-source { display: block; font-weight: 600; color: #555; }
+        .feed-date { display: block; margin-top: 2px; }
+        .feed-loading { padding: 1.5rem; color: #888; font-size: 0.9rem; text-align: center; }
+        .ai-badge {
+            display: inline-block;
+            font-size: 0.65rem;
+            font-weight: 700;
+            padding: 2px 6px;
+            border-radius: 3px;
+            margin-left: 6px;
+            vertical-align: middle;
+            background: #e8f0fe;
+            color: var(--blue);
+            letter-spacing: 0.5px;
+        }
+
+        /* AFFILIATE STYLES */
+        .aff-sidebar-box { background: #fff; border: 1px solid #ddd; margin-bottom: 1.5rem; padding: 1.5rem; }
+        .aff-sidebar-box h3 { margin: 0 0 0.75rem; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: #888; }
+        .aff-tool {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.65rem 0;
+            border-bottom: 1px solid #f0f0f0;
+            gap: 0.75rem;
+        }
+        .aff-tool:last-child { border-bottom: none; padding-bottom: 0; }
+        .aff-tool-info { flex: 1; }
+        .aff-tool-name { font-weight: 700; font-size: 0.9rem; color: var(--text); }
+        .aff-tool-desc { font-size: 0.78rem; color: #666; margin-top: 2px; }
+        .aff-tool-btn {
+            display: inline-block;
+            background: var(--blue);
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 5px 12px;
+            border-radius: 3px;
+            white-space: nowrap;
+        }
+        .aff-tool-btn:hover { background: var(--navy); }
+
+        /* IN-ARTICLE AFFILIATE BOX */
+        .in-article-aff {
+            background: #f0f7ff;
+            border: 1px solid #c8ddf8;
+            border-left: 4px solid var(--blue);
+            border-radius: 4px;
+            padding: 1.1rem 1.25rem;
+            margin: 2rem 0 0;
+        }
+        .in-article-aff p { margin: 0 0 0.75rem; font-size: 0.85rem; color: #444; font-weight: 600; }
+        .in-article-aff-links { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .in-article-aff-link {
+            display: inline-block;
+            padding: 6px 14px;
+            border-radius: 3px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-decoration: none;
+            color: #fff;
+            background: var(--blue);
+        }
+        .in-article-aff-link:hover { background: var(--navy); }
+        .in-article-aff-link.secondary { background: #fff; color: var(--navy); border: 1px solid var(--navy); }
+        .in-article-aff-link.secondary:hover { background: #f0f4ff; }
+        .in-article-aff-note { font-size: 0.7rem; color: #aaa; margin-top: 0.5rem; }
+
+        /* AFFILIATE STRIP */
+        .aff-strip { max-width: 1200px; margin: 0 auto 3rem; padding: 0 5%; }
+        .aff-strip h2 { font-size: 1.1rem; font-weight: 900; color: var(--navy); border-bottom: 3px solid var(--navy); padding-bottom: 0.5rem; margin-bottom: 1.25rem; }
+        .aff-strip-label { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #aaa; margin-bottom: 0.75rem; }
+        .aff-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
+        .aff-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 1.25rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 0.75rem;
+        }
+        .aff-card-name { font-weight: 900; font-size: 1rem; color: var(--navy); }
+        .aff-card-desc { font-size: 0.85rem; color: #555; line-height: 1.4; }
+        .aff-card-link {
+            display: block;
+            background: var(--navy);
+            color: #fff;
+            text-align: center;
+            padding: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.85rem;
+            border-radius: 3px;
+        }
+        .aff-card-link:hover { background: var(--blue); }
+        .sponsored-tag { font-size: 0.65rem; color: #bbb; text-align: right; margin-top: 4px; }
     </style>
 </head>
 <body>
@@ -38,6 +175,34 @@
 <main class="container">
     <section>
         {{ content }}
+
+        <!-- IN-ARTICLE AFFILIATE PLACEMENT -->
+        <div class="in-article-aff">
+            <p>Tools mentioned in this space that we use and recommend:</p>
+            <div class="in-article-aff-links">
+                <a href="https://searchable.com/?ref=danieled"
+                   class="in-article-aff-link"
+                   target="_blank" rel="noopener sponsored">
+                    Searchable — AI Search
+                </a>
+                <a href="https://www.airops.com/?utm_campaign=AirOps_Builder_Network&utm_medium=affiliate&utm_source=rewardful&via=Daniel"
+                   class="in-article-aff-link"
+                   target="_blank" rel="noopener sponsored">
+                    AirOps — AI Content Workflows
+                </a>
+                <a href="https://www.amazon.com/s?k=AEO+SEO+AI+search+marketing&tag=prismpublicat-20"
+                   class="in-article-aff-link secondary"
+                   target="_blank" rel="noopener sponsored">
+                    Related Books on Amazon
+                </a>
+                <a href="https://shipper.now/?ref=danieliq"
+                   class="in-article-aff-link secondary"
+                   target="_blank" rel="noopener sponsored">
+                    Shipper.now
+                </a>
+            </div>
+            <div class="in-article-aff-note">This post contains affiliate links. We may earn a commission at no extra cost to you.</div>
+        </div>
     </section>
 
     <aside>
@@ -46,11 +211,57 @@
             <p style="font-size:0.9rem;">PrismPublication.com is the next-gen ad network for chatbot developers.</p>
             <a href="https://prismpublication.com" class="israelileads-btn" style="background:var(--blue);">Visit Prism</a>
         </div>
+
+        <!-- AFFILIATE: Searchable + AirOps -->
+        <div class="aff-sidebar-box">
+            <h3>Tools We Use</h3>
+            <div class="aff-tool">
+                <div class="aff-tool-info">
+                    <div class="aff-tool-name">Searchable</div>
+                    <div class="aff-tool-desc">AI-powered search built for modern content</div>
+                </div>
+                <a href="https://searchable.com/?ref=danieled" class="aff-tool-btn" target="_blank" rel="noopener sponsored">Try it</a>
+            </div>
+            <div class="aff-tool">
+                <div class="aff-tool-info">
+                    <div class="aff-tool-name">AirOps</div>
+                    <div class="aff-tool-desc">Scale content workflows with AI automations</div>
+                </div>
+                <a href="https://www.airops.com/?utm_campaign=AirOps_Builder_Network&utm_medium=affiliate&utm_source=rewardful&via=Daniel" class="aff-tool-btn" target="_blank" rel="noopener sponsored">Try it</a>
+            </div>
+        </div>
+
+        <!-- AFFILIATE: Amazon -->
+        <div class="aff-sidebar-box">
+            <h3>Recommended Reading</h3>
+            <p style="font-size:0.85rem;color:#555;margin:0 0 0.75rem;">Top books on AEO, GEO, and AI marketing strategy.</p>
+            <a href="https://www.amazon.com/s?k=AEO+SEO+AI+marketing&tag=prismpublicat-20" class="israelileads-btn" style="background:var(--navy);font-size:0.85rem;" target="_blank" rel="noopener sponsored">Browse on Amazon</a>
+            <div class="sponsored-tag">As an Amazon Associate I earn from qualifying purchases.</div>
+        </div>
     </aside>
 </main>
+
+<!-- LIVE NEWS FEEDS -->
+<div class="news-section">
+    <h2>Live Industry News <span class="ai-badge">AI-curated</span></h2>
+    <div class="feed-tabs">
+        <div class="feed-tab active" onclick="switchTab('seo-aeo')">SEO / GEO / AEO</div>
+        <div class="feed-tab" onclick="switchTab('adtech')">AdTech</div>
+        <div class="feed-tab" onclick="switchTab('ai-chat')">AI Chat Apps</div>
+    </div>
+    <div id="panel-seo-aeo" class="feed-panel active">
+        <div class="feed-loading">Loading latest SEO / GEO / AEO news...</div>
+    </div>
+    <div id="panel-adtech" class="feed-panel">
+        <div class="feed-loading">Loading latest AdTech news...</div>
+    </div>
+    <div id="panel-ai-chat" class="feed-panel">
+        <div class="feed-loading">Loading latest AI Chat App news...</div>
+    </div>
+</div>
+
 <footer style="background: #fff; border-top: 5px solid var(--navy); padding: 3rem 5% 2rem; margin-top: 4rem;">
     <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
-        
         <div>
             <h4 style="color: var(--navy); margin-top: 0; text-transform: uppercase; letter-spacing: 1px;">Contact Information</h4>
             <p style="margin: 5px 0; font-size: 0.95rem;"><strong>IsraeliLeads</strong></p>
@@ -63,7 +274,6 @@
                 <strong>Email:</strong> <a href="mailto:info@israelileads.com" style="color: var(--blue); text-decoration: none;">info@israelileads.com</a>
             </p>
         </div>
-
         <div>
             <h4 style="color: var(--navy); margin-top: 0; text-transform: uppercase; letter-spacing: 1px;">Navigation</h4>
             <ul style="list-style: none; padding: 0; font-size: 0.9rem;">
@@ -72,10 +282,75 @@
             </ul>
         </div>
     </div>
-
     <div style="max-width: 1200px; margin: 2rem auto 0; padding-top: 1.5rem; border-top: 1px solid #eee; text-align: center; font-size: 0.8rem; color: #888;">
         &copy; 2026 IsraeliLeads. All rights reserved.
     </div>
 </footer>
+
+<script>
+    const RSS2JSON = 'https://api.rss2json.com/v1/api.json?rss_url=';
+
+    const feeds = {
+        'seo-aeo': 'https://news.google.com/rss/search?q=AEO+GEO+SEO+generative+engine+optimization&hl=en-US&gl=US&ceid=US:en',
+        'adtech':  'https://news.google.com/rss/search?q=adtech+programmatic+advertising+ad+network&hl=en-US&gl=US&ceid=US:en',
+        'ai-chat': 'https://news.google.com/rss/search?q=AI+chat+app+monetization+mobile+chatbot&hl=en-US&gl=US&ceid=US:en'
+    };
+
+    const loaded = {};
+
+    function formatDate(str) {
+        const d = new Date(str);
+        return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+    }
+
+    function renderItems(panelId, items) {
+        const panel = document.getElementById('panel-' + panelId);
+        if (!items || items.length === 0) {
+            panel.innerHTML = '<div class="feed-loading">No articles found.</div>';
+            return;
+        }
+        panel.innerHTML = items.slice(0, 10).map(item => `
+            <div class="feed-item">
+                <a href="${item.link}" target="_blank" rel="noopener">${item.title}</a>
+                <div class="feed-meta">
+                    <span class="feed-source">${item.author || ''}</span>
+                    <span class="feed-date">${formatDate(item.pubDate)}</span>
+                </div>
+            </div>
+        `).join('');
+    }
+
+    function loadFeed(tabId) {
+        if (loaded[tabId]) return;
+        loaded[tabId] = true;
+        const url = RSS2JSON + encodeURIComponent(feeds[tabId]);
+        fetch(url)
+            .then(r => r.json())
+            .then(data => {
+                if (data.status === 'ok') {
+                    renderItems(tabId, data.items);
+                } else {
+                    document.getElementById('panel-' + tabId).innerHTML =
+                        '<div class="feed-loading">Could not load feed. Try again later.</div>';
+                }
+            })
+            .catch(() => {
+                document.getElementById('panel-' + tabId).innerHTML =
+                    '<div class="feed-loading">Could not load feed. Try again later.</div>';
+            });
+    }
+
+    function switchTab(tabId) {
+        document.querySelectorAll('.feed-tab').forEach((t, i) => {
+            t.classList.toggle('active', ['seo-aeo','adtech','ai-chat'][i] === tabId);
+        });
+        document.querySelectorAll('.feed-panel').forEach(p => p.classList.remove('active'));
+        document.getElementById('panel-' + tabId).classList.add('active');
+        loadFeed(tabId);
+    }
+
+    // Load first tab on page load
+    loadFeed('seo-aeo');
+</script>
 </body>
 </html>

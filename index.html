@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="White Hat AI perspectives on AdTech, SEO, AEO &amp; GEO - Ethical digital marketing strategies">
+    <meta name="keywords" content="AdTech, SEO, AEO, GEO, AI, White Hat, Ethical Marketing">
+    <meta name="author" content="North Point Alliance">
+    <link rel="alternate" type="application/rss+xml" title="ChatAd Land RSS Feed" href="https://github.com/northpointalliance/chatad-land/raw/main/rss.xml">
+    <title>ChatAd Land - White Hat AI for AdTech, SEO, AEO &amp; GEO</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        
+        .nav {
+            background: #f5f5f5;
+            padding: 15px 20px;
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .nav a {
+            text-decoration: none;
+            color: #667eea;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        
+        .nav a:hover {
+            color: #764ba2;
+        }
+        
+        .nav .rss {
+            background: #ff6b35;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 5px;
+        }
+        
+        .nav .rss:hover {
+            background: #ff5722;
+            color: white;
+        }
+        
+        main {
+            padding: 40px 20px;
+        }
+        
+        .intro {
+            background: #f9f9f9;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .intro h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        
+        .intro p {
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .articles {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .article-card {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.2);
+        }
+        
+        .article-card-header {
+            padding: 20px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .category {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            margin-bottom: 10px;
+        }
+        
+        .category.adtech {
+            background: #ff6b35;
+        }
+        
+        .category.seo {
+            background: #00b894;
+        }
+        
+        .category.aeo {
+            background: #6c5ce7;
+        }
+        
+        .category.geo {
+            background: #e17055;
+        }
+        
+        .article-card h3 {
+            color: #333;
+            margin: 10px 0;
+            font-size: 1.3em;
+        }
+        
+        .article-card-body {
+            padding: 20px;
+        }
+        
+        .article-card p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        .article-card a {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s;
+            margin-top: 10px;
+        }
+        
+        .article-card a:hover {
+            background: #764ba2;
+        }
+        
+        footer {
+            background: #f5f5f5;
+            padding: 30px 20px;
+            text-align: center;
+            border-top: 1px solid #ddd;
+            color: #666;
+        }
+        
+        footer p {
+            margin-bottom: 10px;
+        }
+        
+        .social-links {
+            margin-top: 15px;
+        }
+        
+        .social-links a {
+            display: inline-block;
+            margin: 0 10px;
+            color: #667eea;
+            text-decoration: none;
+        }
+        
+        .social-links a:hover {
+            color: #764ba2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 ChatAd Land</h1>
+            <p>White Hat AI for AdTech, SEO, AEO &amp; GEO</p>
+            <p style="font-size: 0.95em; margin-top: 15px;">Ethical Digital Marketing Strategies Powered by Responsible AI</p>
+        </header>
+        
+        <nav class="nav">
+            <a href="#about">About</a>
+            <a href="#articles">Articles</a>
+            <a href="#categories">Categories</a>
+            <a href="rss.xml" class="rss">📡 RSS Feed</a>
+        </nav>
+        
+        <main>
+            <section id="about" class="intro">
+                <h2>Welcome to ChatAd Land</h2>
+                <p><strong>Navigating the intersection of AdTech, SEO, AEO, and GEO with ethical AI principles.</strong></p>
+                <p>ChatAd Land is a knowledge hub dedicated to exploring white hat, responsible AI applications in digital marketing. We focus on:</p>
+                <ul style="margin-left: 20px; margin-top: 10px; line-height: 1.8;">
+                    <li><strong>AdTech:</strong> Ethical advertising technology and responsible data practices</li>
+                    <li><strong>SEO:</strong> Modern search engine optimization aligned with AI and user intent</li>
+                    <li><strong>AEO:</strong> Autonomous Entity Optimization for AI agents and future search</li>
+                    <li><strong>GEO:</strong> Location-based marketing with privacy at its core</li>
+                </ul>
+                <p style="margin-top: 15px;">Our mission: Help marketers, businesses, and technologists build sustainable, ethical digital strategies that respect user privacy while delivering results.</p>
+            </section>
+            
+            <section id="articles">
+                <h2 style="margin-bottom: 30px; color: #333;">Featured Articles</h2>
+                <div class="articles">
+                    
+                    <article class="article-card">
+                        <div class="article-card-header">
+                            <span class="category adtech">AdTech</span>
+                            <h3>White Hat AI in AdTech</h3>
+                        </div>
+                        <div class="article-card-body">
+                            <p>Exploring ethical AI applications in advertising technology, focusing on transparency, consent, and user privacy while maintaining campaign effectiveness.</p>
+                            <a href="articles/white-hat-ai-adtech.html">Read Article →</a>
+                        </div>
+                    </article>
+                    
+                    <article class="article-card">
+                        <div class="article-card-header">
+                            <span class="category seo">SEO</span>
+                            <h3>SEO Evolution: AI-Powered Optimization</h3>
+                        </div>
+                        <div class="article-card-body">
+                            <p>Modern SEO practices enhanced by AI: Intent-based keyword research, semantic search optimization, and E-E-A-T alignment.</p>
+                            <a href="articles/seo-ai-evolution.html">Read Article →</a>
+                        </div>
+                    </article>
+                    
+                    <article class="article-card">
+                        <div class="article-card-header">
+                            <span class="category aeo">AEO</span>
+                            <h3>AEO Decoded: Autonomous Entity Optimization</h3>
+                        </div>
+                        <div class="article-card-body">
+                            <p>Understanding how to structure content and data for AI agents, chatbots, and autonomous systems while maintaining human-centric values.</p>
+                            <a href="articles/aeo-autonomous-entities.html">Read Article →</a>
+                        </div>
+                    </article>
+                    
+                    <article class="article-card">
+                        <div class="article-card-header">
+                            <span class="category geo">GEO</span>
+                            <h3>GEO-Targeting Reimagined</h3>
+                        </div>
+                        <div class="article-card-body">
+                            <p>Ethical location-based marketing strategies that balance personalization with privacy, leveraging location data responsibly.</p>
+                            <a href="articles/geo-targeting-ethics.html">Read Article →</a>
+                        </div>
+                    </article>
+                    
+                    <article class="article-card">
+                        <div class="article-card-header">
+                            <span class="category" style="background: #a29bfe;">Strategy</span>
+                            <h3>Converging Trends: Unified Digital Strategy</h3>
+                        </div>
+                        <div class="article-card-body">
+                            <p>Integrating AdTech, SEO, AEO, and GEO into a unified, ethical digital marketing strategy powered by responsible AI.</p>
+                            <a href="articles/convergence-strategy.html">Read Article →</a>
+                        </div>
+                    </article>
+                    
+                </div>
+            </section>
+            
+            <section id="categories" style="background: #f9f9f9; padding: 30px; border-radius: 8px; margin-top: 40px;">
+                <h2 style="color: #333; margin-bottom: 20px;">Content Categories</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                    <div>
+                        <h3 style="color: #ff6b35; margin-bottom: 10px;">📊 AdTech</h3>
+                        <p>Ethical advertising technology, programmatic buying, data privacy, and responsible audience targeting.</p>
+                    </div>
+                    <div>
+                        <h3 style="color: #00b894; margin-bottom: 10px;">🔍 SEO</h3>
+                        <p>Search optimization, keyword strategy, content quality, and alignment with E-E-A-T principles.</p>
+                    </div>
+                    <div>
+                        <h3 style="color: #6c5ce7; margin-bottom: 10px;">🤖 AEO</h3>
+                        <p>AI agent optimization, structured data, semantic web, and machine-readable content standards.</p>
+                    </div>
+                    <div>
+                        <h3 style="color: #e17055; margin-bottom: 10px;">📍 GEO</h3>
+                        <p>Location-based marketing, geo-targeting ethics, local relevance, and privacy-compliant tracking.</p>
+                    </div>
+                </div>
+            </section>
+            
+        </main>
+        
+        <footer>
+            <p><strong>ChatAd Land</strong> — White Hat AI Digital Marketing Knowledge Hub</p>
+            <p>Ethical AdTech | Modern SEO | Autonomous Entity Optimization | Responsible Geo-Targeting</p>
+            <p style="margin-top: 15px; font-size: 0.9em;">© 2026 North Point Alliance. All rights reserved.</p>
+            <p style="margin-top: 10px;"><a href="rss.xml" style="color: #ff6b35;">Subscribe to RSS Feed →</a></p>
+        </footer>
+    </div>
+</body>
+</html>

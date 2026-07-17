@@ -1,0 +1,20 @@
+{
+  "name": "ChatAd Land",
+  "siteUrl": "https://chatad-land.pages.dev",
+  "publishCadence": "New AI-labeled articles every Tuesday and Thursday.",
+  "tagline": "Insights into SEO, GEO, and AEO for the AI search era.",
+  "niche": "adtech and AI search marketing",
+  "about": "ChatAd Land tracks the shift from search engines to answer engines: how AEO, GEO, and contextual ad placement work now that people ask AI instead of Googling. Published by IsraeliLeads.",
+  "rssSources": [
+    "https://news.google.com/rss/search?q=AEO+GEO+SEO+generative+engine+optimization+when:3d&hl=en-US&gl=US&ceid=US:en",
+    "https://news.google.com/rss/search?q=adtech+programmatic+advertising+when:3d&hl=en-US&gl=US&ceid=US:en"
+  ],
+  "affiliates": {
+    "searchable": { "url": "https://searchable.com/?ref=danieled", "status": "live", "commission": "unknown, already joined" },
+    "airops": { "url": "https://www.airops.com/?utm_campaign=AirOps_Builder_Network&utm_medium=affiliate&utm_source=rewardful&via=Daniel", "status": "live", "commission": "unknown, already joined, via Rewardful" },
+    "amazon": { "url": "https://www.amazon.com/s?k=AEO+SEO+AI+search+marketing&tag=prismpublicat-20", "status": "live", "commission": "Amazon Associates standard rates" },
+    "shipper": { "url": "https://shipper.now/?ref=danieliq", "status": "live", "commission": "unknown, already joined" },
+    "postiz": { "url": "https://postiz.pro/daniel-rosenthal", "status": "live", "commission": "30% per sale, lifetime" }
+  },
+  "prismMention": true
+}

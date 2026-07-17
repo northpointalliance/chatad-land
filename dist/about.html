@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>About | ChatAd Land</title>
+<meta name="description" content="About and disclosure" />
+<link rel="canonical" href="https://chatadland.pages.dev/about.html" />
+<link rel="alternate" type="application/rss+xml" title="ChatAd Land RSS" href="/feed.xml" />
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"ChatAd Land","url":"https://chatadland.pages.dev/","description":"Insights into SEO, GEO, and AEO for the AI search era.","publisher":{"@id":"https://chatadland.pages.dev/#organization"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","@id":"https://chatadland.pages.dev/#organization","name":"Prism Publication","url":"https://chatadland.pages.dev/","email":"info@prismpublication.com"}</script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/assets/style.css" />
+</head>
+<body class="">
+<nav>
+  <a class="logo" href="/">ChatAd Land</a>
+  <div class="nav-links">
+    <a href="/">Articles</a>
+    <a href="/feed.xml">RSS</a>
+    <a href="/about.html">About</a>
+  </div>
+</nav>
+<article class="article-body">
+  <h1>About ChatAd Land</h1>
+  <p>ChatAd Land tracks the shift from search engines to answer engines: how AEO, GEO, and contextual ad placement work now that people ask AI instead of Googling. Published by IsraeliLeads.</p>
+  <h2 id="schedule">Publishing schedule</h2>
+  <p>New AI-labeled articles every Tuesday and Thursday.</p>
+  <h2 id="disclosure">Disclosure</h2>
+  <p>ChatAd Land is an independent site. Some posts contain affiliate links, marked clearly where they appear. Articles marked "AI-written, human-reviewed" are drafted with AI assistance and reviewed by a human editor before publishing. We separate sponsored/affiliate content from editorial navigation, affiliate links never appear disguised as a site section.</p>
+</article>
+<footer>
+  <div>&copy; 2026 ChatAd Land. Some links are affiliate links, see our <a href="/about.html#disclosure">disclosure</a>.</div>
+  <div><a href="/about.html">About</a> &middot; <a href="/feed.xml">RSS feed</a></div>
+  <div class="footer-company">Copyright 2026 Prism Publication &middot; Dr Enrico Fabrigat, Holon, Israel &middot; <a href="mailto:info@prismpublication.com">info@prismpublication.com</a></div>
+</footer>
+<script>
+(function(){
+  var el = document.getElementById('trending-widget');
+  if (!el) return;
+  fetch('/trending').then(function(r){ return r.json(); }).then(function(items){
+    if (!items || !items.length) return;
+    var html = '<h3>Trending in adtech and AI search marketing</h3><ul>' + items.slice(0,6).map(function(it){
+      return '<li><a href="' + it.link + '" target="_blank" rel="noopener">' + it.title + '</a></li>';
+    }).join('') + '</ul>';
+    el.innerHTML = html;
+  }).catch(function(){});
+})();
+</script>
+</body>
+</html>

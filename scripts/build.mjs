@@ -358,6 +358,13 @@ function renderRobots() {
   ].join('\n');
 }
 
+function renderRedirects() {
+  return [
+    '/rss.xml /feed.xml 301',
+    '/feed /feed.xml 301'
+  ].join('\n');
+}
+
 function renderSitemap(articles) {
   const siteUrl = getSiteUrl();
   const today = new Date().toISOString().slice(0, 10);
@@ -395,6 +402,7 @@ async function main() {
   fs.writeFileSync(path.join(distDir, 'feed.xml'), renderFeed(articles));
   fs.writeFileSync(path.join(distDir, 'robots.txt'), renderRobots());
   fs.writeFileSync(path.join(distDir, 'sitemap.xml'), renderSitemap(articles));
+  fs.writeFileSync(path.join(distDir, '_redirects'), renderRedirects());
 
   for (const a of articles) {
     const dir = path.join(distDir, 'articles', a.slug);
@@ -413,7 +421,7 @@ async function main() {
 
   fs.writeFileSync(path.join(functionsDir, 'trending.js'), trendingFn);
   console.log('  + functions/trending.js (sources: ' + rssSources + ')');
-  console.log('  + robots.txt, sitemap.xml');
+  console.log('  + robots.txt, sitemap.xml, _redirects');
 }
 
 main().catch(function(err) {

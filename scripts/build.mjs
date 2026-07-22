@@ -73,6 +73,73 @@ function articleJsonLd(a) {
   };
 }
 
+function stripMarkdown(md) {
+  return String(md)
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
+    .replace(/\*\*([^*]+)\*\*/g, '$1')
+    .replace(/\*([^*]+)\*/g, '$1')
+    .replace(/`([^`]+)`/g, '$1')
+    .replace(/^#+\s+/gm, '')
+    .replace(/\|/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function firstSentences(text, max) {
+  const parts = text.match(/[^.!?]+[.!?]+/g) || [text];
+  return parts.slice(0, max).join(' ').trim();
+}
+
+function extractFaqPairs(raw) {
+  if (!raw) return [];
+  const sections = raw.split(/\r?\n## /);
+  const pairs = [];
+  for (let i = 1; i < sections.length; i++) {
+    const block = sections[i];
+    const nl = block.indexOf('\n');
+    if (nl === -1) continue;
+    const question = block.slice(0, nl).trim();
+    let body = block.slice(nl + 1);
+    const tldrIdx = body.search(/\*\*TLDR:\*\*/);
+    if (tldrIdx !== -1) body = body.slice(0, tldrIdx);
+    const tableIdx = body.indexOf('\n|');
+    const hasTable = tableIdx !== -1;
+    if (hasTable) body = body.slice(0, tableIdx);
+    let answer = firstSentences(stripMarkdown(body), 3);
+    const tldrMatch = block.match(/\*\*TLDR:\*\*\s*(.+)/);
+    if (tldrMatch && (hasTable || answer.length < 50)) {
+      answer = stripMarkdown(tldrMatch[1]);
+    }
+    if (question.length > 5 && answer.length > 20) {
+      pairs.push({ question, answer });
+    }
+  }
+  return pairs;
+}
+
+function faqPageJsonLd(a) {
+  const faqs = extractFaqPairs(a.raw);
+  if (!faqs.length) return null;
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    'mainEntity': faqs.map(function(f) {
+      return {
+        '@type': 'Question',
+        'name': f.question,
+        'acceptedAnswer': { '@type': 'Answer', 'text': f.answer }
+      };
+    })
+  };
+}
+
+function articleJsonLdBundle(a) {
+  const schemas = baseJsonLd().concat([articleJsonLd(a)]);
+  const faq = faqPageJsonLd(a);
+  if (faq) schemas.push(faq);
+  return schemas;
+}
+
 function extractTrendingItems(xml, max) {
   const items = [];
   const itemRe = /<item[\s\S]*?<\/item>/g;
@@ -179,6 +246,20 @@ function cadenceLine() {
   return '<p class="publish-cadence">' + escapeHtml(config.publishCadence) + '</p>';
 }
 
+function webAnalyticsBeacon() {
+  const configFile = path.join(siteDir, 'static', 'config', 'cf-web-analytics.json');
+  if (!fs.existsSync(configFile)) return '';
+  try {
+    const { token } = JSON.parse(fs.readFileSync(configFile, 'utf8'));
+    if (!token || String(token).includes('PASTE')) return '';
+    const payload = JSON.stringify({ token });
+    return `<!-- Cloudflare Web Analytics -->
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='${payload}'></script>`;
+  } catch (e) {
+    return '';
+  }
+}
+
 function layout(opts) {
   const title = escapeHtml(opts.title);
   const description = escapeHtml(opts.description);
@@ -236,6 +317,7 @@ function layout(opts) {
     '  }).catch(function(){});',
     '})();',
     '</script>',
+    webAnalyticsBeacon(),
     '</body>',
     '</html>'
   ].join('\n');
@@ -269,7 +351,7 @@ function renderHome(articles, trendingItems) {
   ].join('\n');
 
   return layout({
-    title: config.name + ' — ' + config.tagline,
+    title: config.name + ' | ' + config.tagline,
     description: config.tagline,
     content: content,
     canonicalPath: '/'
@@ -295,7 +377,7 @@ function renderArticle(a) {
     description: a.summary || a.title,
     content: content,
     canonicalPath: '/articles/' + a.slug + '/',
-    jsonLd: baseJsonLd().concat([articleJsonLd(a)])
+    jsonLd: articleJsonLdBundle(a)
   });
 }
 

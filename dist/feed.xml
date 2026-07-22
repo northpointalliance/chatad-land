@@ -2,56 +2,42 @@
 <rss version="2.0">
 <channel>
   <title>ChatAd Land</title>
-  <link>https://chatad-land.pages.dev</link>
+  <link>https://chatad-land-ekx.pages.dev</link>
   <description>Insights into SEO, GEO, and AEO for the AI search era.</description>
   <item>
+    <title>Why Does View-Source Still Decide GEO When Your CMS Looks Fine in Chrome?</title>
+    <link>https://chatad-land-ekx.pages.dev/articles/why-view-source-still-decides-geo-static-html-checklist/</link>
+    <guid>https://chatad-land-ekx.pages.dev/articles/why-view-source-still-decides-geo-static-html-checklist/</guid>
+    <pubDate>Tue, 28 Jul 2026 00:00:00 GMT</pubDate>
+    <description>LLM crawlers and answer engines read raw HTML, not your hydrated React tree. Here is a static-first checklist for SEO, GEO, and AEO on Cloudflare Pages.</description>
+  </item>
+  <item>
+    <title>Does ChatGPT Ignore Your Google Rankings? What a 320-Query Citation Study Actually Shows</title>
+    <link>https://chatad-land-ekx.pages.dev/articles/does-chatgpt-ignore-google-rankings-citelens-citation-study/</link>
+    <guid>https://chatad-land-ekx.pages.dev/articles/does-chatgpt-ignore-google-rankings-citelens-citation-study/</guid>
+    <pubDate>Fri, 24 Jul 2026 00:00:00 GMT</pubDate>
+    <description>CiteLens compared AI engine citations to Google and Bing top-10 results. Google AI Mode and Perplexity track SEO; ChatGPT barely does. Here is how to split your GEO strategy.</description>
+  </item>
+  <item>
+    <title>What Is Convomargin (Stealth) and Why LLM Margin Tracking Matters for GEO Teams?</title>
+    <link>https://chatad-land-ekx.pages.dev/articles/what-is-convomargin-stealth-and-why-llm-margin-tracking-matters-for-geo-teams/</link>
+    <guid>https://chatad-land-ekx.pages.dev/articles/what-is-convomargin-stealth-and-why-llm-margin-tracking-matters-for-geo-teams/</guid>
+    <pubDate>Wed, 22 Jul 2026 00:00:00 GMT</pubDate>
+    <description>Convomargin is a stealth project from Prism Publication focused on LLM margin, not vanity usage charts. Here is why answer-engine teams need unit economics, not another dashboard.</description>
+  </item>
+  <item>
+    <title>How Do You Measure LLM Costs When GEO and AEO Become Your Content Engine?</title>
+    <link>https://chatad-land-ekx.pages.dev/articles/how-do-you-measure-llm-costs-when-geo-and-aeo-become-your-content-engine/</link>
+    <guid>https://chatad-land-ekx.pages.dev/articles/how-do-you-measure-llm-costs-when-geo-and-aeo-become-your-content-engine/</guid>
+    <pubDate>Tue, 21 Jul 2026 00:00:00 GMT</pubDate>
+    <description>Answer-engine workflows burn tokens on drafts, embeddings, evals, and rewrites, not just chat. Here is a plain-text cost model GEO teams can actually budget against.</description>
+  </item>
+  <item>
     <title>iCrowd Is Selling AEO Press Releases Now. Here&apos;s What That Actually Buys You.</title>
-    <link>https://chatad-land.pages.dev/articles/icrowd-is-selling-aeo-press-releases-now-here-s-what-that-actually-buys-you/</link>
-    <guid>https://chatad-land.pages.dev/articles/icrowd-is-selling-aeo-press-releases-now-here-s-what-that-actually-buys-you/</guid>
+    <link>https://chatad-land-ekx.pages.dev/articles/icrowd-is-selling-aeo-press-releases-now-here-s-what-that-actually-buys-you/</link>
+    <guid>https://chatad-land-ekx.pages.dev/articles/icrowd-is-selling-aeo-press-releases-now-here-s-what-that-actually-buys-you/</guid>
     <pubDate>Fri, 17 Jul 2026 00:00:00 GMT</pubDate>
     <description>A wire-distribution vendor added AEO and GEO to its press release pitch this week. The useful part is distribution discipline; the risky part is treating syndication like citation engineering.</description>
-  </item>
-  <item>
-    <title>Another AEO Agency Launched This Month Selling What Google Just Said Doesn&apos;t Work</title>
-    <link>https://chatad-land.pages.dev/articles/another-aeo-agency-launched-this-month-selling-what-google-just-said-doesn-t-work/</link>
-    <guid>https://chatad-land.pages.dev/articles/another-aeo-agency-launched-this-month-selling-what-google-just-said-doesn-t-work/</guid>
-    <pubDate>Tue, 14 Jul 2026 00:00:00 GMT</pubDate>
-    <description>Coozmoo&apos;s new AEO/GEO service pitches visibility inside ChatGPT and Gemini days after Google&apos;s own guide named the exact tactics that don&apos;t move the needle.</description>
-  </item>
-  <item>
-    <title>Google Just Told the AEO Industry Half Its Playbook Doesn&apos;t Work</title>
-    <link>https://chatad-land.pages.dev/articles/google-just-told-the-aeo-industry-half-its-playbook-doesn-t-work/</link>
-    <guid>https://chatad-land.pages.dev/articles/google-just-told-the-aeo-industry-half-its-playbook-doesn-t-work/</guid>
-    <pubDate>Mon, 06 Jul 2026 00:00:00 GMT</pubDate>
-    <description>Google&apos;s updated guide to generative AI search openly lists the AEO and GEO tactics it ignores, and the list is longer than most agencies want to admit.</description>
-  </item>
-  <item>
-    <title>The Shift to Answer Engine Optimization (AEO)</title>
-    <link>https://chatad-land.pages.dev/articles/the-shift-to-answer-engine-optimization-aeo/</link>
-    <guid>https://chatad-land.pages.dev/articles/the-shift-to-answer-engine-optimization-aeo/</guid>
-    <pubDate>Tue, 24 Mar 2026 00:00:00 GMT</pubDate>
-    <description>Why traditional SEO is losing ground and what it takes to be the source an AI actually cites.</description>
-  </item>
-  <item>
-    <title>The 2026 Guide to AEO: Why Answers Are the New SEO</title>
-    <link>https://chatad-land.pages.dev/articles/the-2026-guide-to-aeo-why-answers-are-the-new-seo/</link>
-    <guid>https://chatad-land.pages.dev/articles/the-2026-guide-to-aeo-why-answers-are-the-new-seo/</guid>
-    <pubDate>Tue, 24 Mar 2026 00:00:00 GMT</pubDate>
-    <description>Moving beyond keywords to entity-first content that gets cited in AI overviews and conversational search.</description>
-  </item>
-  <item>
-    <title>Scaling Across Borders: How AI Marketing Levelled the Field for Israeli Tech</title>
-    <link>https://chatad-land.pages.dev/articles/scaling-across-borders-how-ai-marketing-levelled-the-field-for-israeli-tech/</link>
-    <guid>https://chatad-land.pages.dev/articles/scaling-across-borders-how-ai-marketing-levelled-the-field-for-israeli-tech/</guid>
-    <pubDate>Tue, 24 Mar 2026 00:00:00 GMT</pubDate>
-    <description>Why the five-figure US agency retainer model is losing ground, and how founders are using AI tools to build authority themselves.</description>
-  </item>
-  <item>
-    <title>Welcome to ChatAd Land</title>
-    <link>https://chatad-land.pages.dev/articles/welcome-to-chatad-land/</link>
-    <guid>https://chatad-land.pages.dev/articles/welcome-to-chatad-land/</guid>
-    <pubDate>Mon, 23 Mar 2026 00:00:00 GMT</pubDate>
-    <description>Why this site exists: tracking the shift from search engines to answer engines, and what it means for how brands get found.</description>
   </item>
 </channel>
 </rss>

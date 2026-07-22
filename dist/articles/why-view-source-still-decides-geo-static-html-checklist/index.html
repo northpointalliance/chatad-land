@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Why Does View-Source Still Decide GEO When Your CMS Looks Fine in Chrome? | ChatAd Land</title>
+<meta name="description" content="LLM crawlers and answer engines read raw HTML, not your hydrated React tree. Here is a static-first checklist for SEO, GEO, and AEO on Cloudflare Pages." />
+<link rel="canonical" href="https://chatad-land-ekx.pages.dev/articles/why-view-source-still-decides-geo-static-html-checklist/" />
+<link rel="alternate" type="application/rss+xml" title="ChatAd Land RSS" href="/feed.xml" />
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"ChatAd Land","url":"https://chatad-land-ekx.pages.dev/","description":"Insights into SEO, GEO, and AEO for the AI search era.","publisher":{"@id":"https://chatad-land-ekx.pages.dev/#organization"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","@id":"https://chatad-land-ekx.pages.dev/#organization","name":"Prism Publication","url":"https://chatad-land-ekx.pages.dev/","email":"info@prismpublication.com"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Why Does View-Source Still Decide GEO When Your CMS Looks Fine in Chrome?","description":"LLM crawlers and answer engines read raw HTML, not your hydrated React tree. Here is a static-first checklist for SEO, GEO, and AEO on Cloudflare Pages.","datePublished":"2026-07-28","author":{"@type":"Organization","name":"IsraeliLeads"},"publisher":{"@id":"https://chatad-land-ekx.pages.dev/#organization"},"mainEntityOfPage":"https://chatad-land-ekx.pages.dev/articles/why-view-source-still-decides-geo-static-html-checklist/"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What do LLM crawlers actually read?","acceptedAnswer":{"@type":"Answer","text":"They read the first HTML response from the URL: headings, paragraphs, tables, lists, and JSON-LD in <head>.  They do not wait for JavaScript bundles to execute.  They do not click accordions."}},{"@type":"Question","name":"How does this differ from classic SEO?","acceptedAnswer":{"@type":"Answer","text":"GEO needs everything critical in the initial HTML. SEO sometimes tolerated JS gaps; GEO does not."}},{"@type":"Question","name":"What belongs in static HTML on every money page?","acceptedAnswer":{"@type":"Answer","text":"Use this publish checklist before any AEO retainer: 1.  Question H2 with a 2–3 sentence direct answer immediately below (this site's house format).  2."}},{"@type":"Question","name":"Why is Cloudflare Pages a sensible GEO default?","acceptedAnswer":{"@type":"Answer","text":"Pages (or Workers SSR with ASSETS) puts HTML at the edge with low TTFB, good for crawlers on a schedule.  Pair with: - Build output directory set to your static folder (dist/), not repo root with stray rss. xml files."}},{"@type":"Question","name":"How do you verify before you publish?","acceptedAnswer":{"@type":"Answer","text":"Five-minute audit anyone can run: ``powershell curl. exe -sS \"https://yoursite. pages."}},{"@type":"Question","name":"What should you ship this week?","acceptedAnswer":{"@type":"Answer","text":"Pick your highest-intent URL.  View-source it.  Move every fact an assistant would need to quote into static HTML this sprint."}}]}</script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/assets/style.css" />
+</head>
+<body class="">
+<nav>
+  <a class="logo" href="/">ChatAd Land</a>
+  <div class="nav-links">
+    <a href="/">Articles</a>
+    <a href="/feed.xml">RSS</a>
+    <a href="/about.html">About</a>
+  </div>
+</nav>
+<article class="article-body">
+  <h1>Why Does View-Source Still Decide GEO When Your CMS Looks Fine in Chrome?</h1>
+  <div class="article-byline">
+    <span class="badge-ai">AI-written, human-reviewed</span>
+    <span>2026-07-28</span>
+    <span>by IsraeliLeads</span>
+  </div>
+  <p>Your marketing site can look perfect in Chrome and still be invisible to GEO. Answer engines, LLM crawlers, and many AI retrieval pipelines start with <strong>view-source</strong>, not your client-side render. If prices, FAQs, specs, and article bodies load only after <code>fetch()</code> or hydration, the model often sees an empty shell.</p>
+<p>That is not a theoretical edge case. It is the default failure mode for SPAs, headless CMS previews, and &quot;we&#39;ll SSR later&quot; roadmaps, exactly when brands rush into AEO agencies promising citation share.</p>
+<h2>What do LLM crawlers actually read?</h2>
+<p>They read the <strong>first HTML response</strong> from the URL: headings, paragraphs, tables, lists, and JSON-LD in <code>&lt;head&gt;</code>. They do not wait for JavaScript bundles to execute. They do not click accordions. They do not open modals.</p>
+<p>If your H1, FAQ answers, and <code>$</code> pricing live only after React mounts, GEO treats the page as thin or empty. Google&#39;s generative experiences are somewhat more forgiving when Googlebot executes JS; <strong>ChatGPT, Perplexity connectors, and many research agents are not your Chrome tab.</strong></p>
+<p><strong>TLDR:</strong> First HTML byte wins. Hydration later does not count for most GEO crawlers.</p>
+<h2>How does this differ from classic SEO?</h2>
+<p>Overlap is large, but GEO adds stricter rules:</p>
+<table>
+<thead>
+<tr>
+<th>Requirement</th>
+<th>SEO</th>
+<th>GEO / AEO</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Indexable text in HTML</td>
+<td>Important</td>
+<td><strong>Mandatory</strong></td>
+</tr>
+<tr>
+<td>JSON-LD matching visible copy</td>
+<td>Nice to have</td>
+<td><strong>Mandatory</strong></td>
+</tr>
+<tr>
+<td>One intent per URL</td>
+<td>Good practice</td>
+<td><strong>Mandatory</strong></td>
+</tr>
+<tr>
+<td><code>$</code> and metrics as plain text</td>
+<td>Helpful</td>
+<td><strong>Mandatory</strong> (greppable)</td>
+</tr>
+<tr>
+<td>Client-only content</td>
+<td>Sometimes ranks</td>
+<td>Usually <strong>invisible</strong> to LLMs</td>
+</tr>
+</tbody></table>
+<p>Classic SEO can sometimes rank a page whose key paragraph is JS-gated. GEO generally will not cite it because the citation extract never existed in static HTML.</p>
+<p><strong>TLDR:</strong> GEO needs everything critical in the initial HTML. SEO sometimes tolerated JS gaps; GEO does not.</p>
+<h2>What belongs in static HTML on every money page?</h2>
+<p>Use this publish checklist before any AEO retainer:</p>
+<ol>
+<li><strong>Question H2</strong> with a <strong>2–3 sentence direct answer</strong> immediately below (this site&#39;s house format).</li>
+<li><strong>Plain-text metrics</strong> with currency symbols, e.g. <code>$99/month</code>, not an icon font.</li>
+<li><strong><code>&lt;table&gt;</code></strong> for specs, grants, or comparisons when data is tabular.</li>
+<li><strong>JSON-LD</strong> in <code>&lt;head&gt;</code>: <code>WebSite</code>, <code>Organization</code>, <code>Article</code>, and <code>FAQPage</code> when FAQs exist.</li>
+<li><strong><code>canonical</code></strong>, meta description, and <code>robots.txt</code> / <code>sitemap.xml</code> paths that return XML, not accidental RSS or legacy files.</li>
+<li><strong>RSS</strong> at a dedicated <code>/feed.xml</code>, not hijacking <code>/</code> or <code>/sitemap.xml</code>.</li>
+</ol>
+<p>ChatAd Land runs on <strong>Cloudflare Pages</strong> with a Node static builder for exactly this reason: article bodies and schema ship in the edge HTML response, with trending widgets as optional JS on top.</p>
+<p><strong>TLDR:</strong> Answers, <code>$</code> figures, tables, and JSON-LD must be in view-source, not behind click or fetch.</p>
+<h2>Why is Cloudflare Pages a sensible GEO default?</h2>
+<p>Pages (or Workers SSR with <code>ASSETS</code>) puts HTML at the edge with low TTFB, good for crawlers on a schedule. Pair with:</p>
+<ul>
+<li><strong>Build output directory</strong> set to your static folder (<code>dist/</code>), not repo root with stray <code>rss.xml</code> files.</li>
+<li><strong><code>_redirects</code></strong> for legacy feed paths.</li>
+<li><strong>Pages Functions</strong> only for supplementary JSON (e.g. <code>/trending</code>), never for article bodies.</li>
+</ul>
+<p>Avoid using a SPA for content-heavy properties. If you must use a framework, prerender data routes or use SSG so view-source matches what users see.</p>
+<p>We fixed the opposite failure mode, legacy RSS served instead of HTML, in our <a href="/articles/icrowd-is-selling-aeo-press-releases-now-here-s-what-that-actually-buys-you/">GEO deploy work</a> on this property. The lesson generalizes: <strong>what you deploy is what crawlers eat.</strong></p>
+<p><strong>TLDR:</strong> Cloudflare Pages plus static <code>dist/</code> output keeps GEO-critical HTML on the edge. Do not deploy repo-root junk.</p>
+<h2>How do you verify before you publish?</h2>
+<p>Five-minute audit anyone can run:</p>
+<pre><code class="language-powershell">curl.exe -sS &quot;https://yoursite.pages.dev/your-page/&quot; | Select-String -Pattern &quot;&lt;h1|application/ld\+json|\$&quot;
+</code></pre>
+<p>Pass: matches for headings, JSON-LD, and literal dollar amounts. Fail: empty body, only <code>&lt;div id=&quot;root&quot;&gt;</code>, or RSS where HTML should be.</p>
+<p>Repeat for <code>/sitemap.xml</code> (expect <code>&lt;urlset&gt;</code>) and one article URL. Log results before paying for citation monitoring. You are measuring visibility of pages that might not exist to models.</p>
+<p>For workflow automation while you harden HTML, orchestration tools like <a href="https://www.airops.com/?utm_campaign=AirOps_Builder_Network&utm_medium=affiliate&utm_source=rewardful&via=Daniel" class="aff-link" rel="sponsored noopener" target="_blank">AirOps ↗</a> can help, but they do not replace static facts on the page.</p>
+<p><strong>TLDR:</strong> curl view-source for H1, JSON-LD, and <code>$</code> before you buy GEO tooling.</p>
+<h2>What should you ship this week?</h2>
+<p>Pick your highest-intent URL. View-source it. Move every fact an assistant would need to quote into static HTML this sprint. Add FAQ JSON-LD if you use question headings. Redeploy from your static output folder.</p>
+<p>GEO is not a copy tweak on a broken architecture. It is <strong>publish discipline</strong>: one intent per URL, greppable data, schema that matches the visible text.</p>
+<p>If you are scaling LLM-assisted drafts, keep margin math honest too. See <a href="/articles/what-is-convomargin-stealth-and-why-llm-margin-tracking-matters-for-geo-teams/">Convomargin and LLM margin tracking</a> for why unit economics and crawlability belong in the same program.</p>
+<p><strong>TLDR:</strong> Fix view-source first. Citations and rankings follow architecture, not the other way around.</p>
+
+  <div class="aff-disclosure" id="disclosure">This post may contain affiliate links. If you buy through one, ChatAd Land may earn a small commission at no extra cost to you. We only link tools we think are actually worth trying.</div>
+</article>
+<footer>
+  <div>&copy; 2026 ChatAd Land. Some links are affiliate links, see our <a href="/about.html#disclosure">disclosure</a>.</div>
+  <div><a href="/about.html">About</a> &middot; <a href="/feed.xml">RSS feed</a></div>
+  <div class="footer-company">Copyright 2026 Prism Publication &middot; Dr Enrico Fabrigat, Holon, Israel &middot; <a href="mailto:info@prismpublication.com">info@prismpublication.com</a></div>
+</footer>
+<script>
+(function(){
+  var el = document.getElementById('trending-widget');
+  if (!el) return;
+  fetch('/trending').then(function(r){ return r.json(); }).then(function(items){
+    if (!items || !items.length) return;
+    var html = '<h3>Trending in adtech and AI search marketing</h3><ul>' + items.slice(0,6).map(function(it){
+      return '<li><a href="' + it.link + '" target="_blank" rel="noopener">' + it.title + '</a></li>';
+    }).join('') + '</ul>';
+    el.innerHTML = html;
+  }).catch(function(){});
+})();
+</script>
+
+</body>
+</html>

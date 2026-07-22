@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://chatad-land.pages.dev/sitemap.xml
+Sitemap: https://chatad-land-ekx.pages.dev/sitemap.xml

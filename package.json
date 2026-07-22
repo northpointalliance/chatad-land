@@ -3,7 +3,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "node scripts/build.mjs"
+    "analytics:enable": "node scripts/enable-pages-analytics.mjs",
+    "build": "node scripts/build.mjs",
+    "deploy": "npm run build && npx wrangler pages deploy dist --project-name chatad-land --commit-dirty=true"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",

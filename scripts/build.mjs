@@ -140,23 +140,69 @@ function articleJsonLdBundle(a) {
   return schemas;
 }
 
-function extractTrendingItems(xml, max) {
+function extractRssItems(xml, max) {
   const items = [];
   const itemRe = /<item[\s\S]*?<\/item>/g;
   const titleRe = /<title>([\s\S]*?)<\/title>/;
   const linkRe = /<link>([\s\S]*?)<\/link>/;
+  const pubDateRe = /<pubDate>([\s\S]*?)<\/pubDate>/;
+  const descRe = /<description>([\s\S]*?)<\/description>/;
+  const sourceRe = /<source[^>]*>([\s\S]*?)<\/source>/;
   let m;
   while ((m = itemRe.exec(xml)) && items.length < max) {
     const block = m[0];
     const t = titleRe.exec(block);
     const l = linkRe.exec(block);
-    if (t && l) {
-      const title = t[1].replace('<![CDATA[', '').replace(']]>', '').trim();
-      const link = l[1].replace('<![CDATA[', '').replace(']]>', '').trim();
-      if (title && link) items.push({ title, link });
-    }
+    if (!t || !l) continue;
+    const title = decodeXmlText(t[1].replace('<![CDATA[', '').replace(']]>', '').trim());
+    const link = decodeXmlText(l[1].replace('<![CDATA[', '').replace(']]>', '').trim());
+    if (!title || !link) continue;
+    const pub = pubDateRe.exec(block);
+    const desc = descRe.exec(block);
+    const src = sourceRe.exec(block);
+    items.push({
+      title,
+      link,
+      pubDate: pub ? pub[1].trim() : new Date().toUTCString(),
+      description: desc
+        ? decodeXmlText(desc[1].replace('<![CDATA[', '').replace(']]>', '').trim()).slice(0, 280)
+        : 'Third-party headline linked for white-hat context. Read the original source.',
+      source: src ? decodeXmlText(src[1].trim()) : 'Industry'
+    });
   }
   return items;
+}
+
+function decodeXmlText(text) {
+  return String(text)
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&amp;/g, '&')
+    .replace(/&apos;/g, "'")
+    .replace(/&quot;/g, '"');
+}
+
+async function fetchIndustryContextAtBuild() {
+  const sources = config.rssSources || (config.rssSource ? [config.rssSource] : []);
+  const results = [];
+  for (const src of sources) {
+    try {
+      const res = await fetch(src, { headers: { 'User-Agent': 'Mozilla/5.0 (compatible; ChatAdLand-context/1.0)' } });
+      if (!res.ok) continue;
+      const xml = await res.text();
+      results.push(...extractRssItems(xml, 8));
+      if (results.length >= 12) break;
+    } catch (e) {
+      /* keep partial results */
+    }
+  }
+  return results.slice(0, 12);
+}
+
+function extractTrendingItems(xml, max) {
+  return extractRssItems(xml, max).map(function(it) {
+    return { title: it.title, link: it.link };
+  });
 }
 
 async function fetchTrendingAtBuild() {
@@ -278,7 +324,7 @@ function layout(opts) {
     '<title>' + title + '</title>',
     '<meta name="description" content="' + description + '" />',
     '<link rel="canonical" href="' + siteUrl + canonicalPath + '" />',
-    '<link rel="alternate" type="application/rss+xml" title="' + escapeHtml(config.name) + ' RSS" href="/feed.xml" />',
+    '<link rel="alternate" type="application/rss+xml" title="' + escapeHtml(config.name) + ' white hat context" href="/feed.xml" />',
     jsonLdScripts(schemas),
     '<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />',
     '<link rel="stylesheet" href="/assets/style.css" />',
@@ -288,7 +334,8 @@ function layout(opts) {
     '  <a class="logo" href="/">' + escapeHtml(config.name) + '</a>',
     '  <div class="nav-links">',
     '    <a href="/">Articles</a>',
-    '    <a href="/feed.xml">RSS</a>',
+    '    <a href="/feed.xml">Industry feed</a>',
+    '    <a href="/articles.xml">Articles</a>',
     '    <a href="/about.html">About</a>',
     '  </div>',
     '</nav>'
@@ -297,7 +344,7 @@ function layout(opts) {
   const footer = [
     '<footer>',
     '  <div>&copy; ' + new Date().getFullYear() + ' ' + escapeHtml(config.name) + '. Some links are affiliate links, see our <a href="/about.html#disclosure">disclosure</a>.</div>',
-    '  <div><a href="/about.html">About</a> &middot; <a href="/feed.xml">RSS feed</a></div>',
+    '  <div><a href="/about.html">About</a> &middot; <a href="/feed.xml">Industry feed</a> &middot; <a href="/articles.xml">Article RSS</a></div>',
     '  <div class="footer-company">Copyright 2026 Prism Publication &middot; Dr Enrico Fabrigat, Holon, Israel &middot; <a href="mailto:info@prismpublication.com">info@prismpublication.com</a></div>',
     '</footer>'
   ].join('\n');
@@ -390,6 +437,9 @@ function renderAbout() {
     '  <h1>About ' + escapeHtml(config.name) + '</h1>',
     '  <p>' + escapeHtml(config.about || config.tagline) + '</p>',
     cadenceBlock,
+    '  <h2 id="feeds">RSS feeds</h2>',
+    '  <p><strong><a href="/feed.xml">Industry feed</a></strong> (' + escapeHtml(config.contextFeedDescription || 'White-hat SEO, GEO, AEO, and AdTech headlines from third-party sources. Links only; we do not republish full articles.') + ')</p>',
+    '  <p><strong><a href="/articles.xml">Article RSS</a></strong> (ChatAd Land editorial posts only.)</p>',
     '  <h2 id="disclosure">Disclosure</h2>',
     '  <p>' + escapeHtml(config.name) + ' is an independent site. Some posts contain affiliate links, marked clearly where they appear. Articles marked "AI-written, human-reviewed" are drafted with AI assistance and reviewed by a human editor before publishing. We separate sponsored/affiliate content from editorial navigation, affiliate links never appear disguised as a site section.</p>',
     '</article>'
@@ -403,15 +453,53 @@ function escapeXml(s) {
   });
 }
 
-function renderFeed(articles) {
+function renderContextFeed(industryItems) {
   const siteUrl = getSiteUrl();
+  const now = new Date().toUTCString();
+  const feedDesc = config.contextFeedDescription ||
+    'White-hat industry headlines in SEO, GEO, AEO, and AdTech. Links to original publishers only.';
+  const rows = industryItems.map(function(it) {
+    return [
+      '  <item>',
+      '    <title>' + escapeXml(it.title) + '</title>',
+      '    <link>' + escapeXml(it.link) + '</link>',
+      '    <guid isPermaLink="true">' + escapeXml(it.link) + '</guid>',
+      '    <pubDate>' + escapeXml(it.pubDate) + '</pubDate>',
+      '    <category>White hat context</category>',
+      '    <description>' + escapeXml(it.description) + '</description>',
+      '    <source url="' + escapeXml(it.link) + '">' + escapeXml(it.source) + '</source>',
+      '  </item>'
+    ].join('\n');
+  }).join('\n');
+
+  return [
+    '<?xml version="1.0" encoding="UTF-8"?>',
+    '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">',
+    '<channel>',
+    '  <title>' + escapeXml(config.name + ' | White Hat GEO/SEO/AEO Context') + '</title>',
+    '  <link>' + escapeXml(siteUrl + '/') + '</link>',
+    '  <description>' + escapeXml(feedDesc) + '</description>',
+    '  <language>en-us</language>',
+    '  <lastBuildDate>' + now + '</lastBuildDate>',
+    '  <generator>ChatAd Land context feed</generator>',
+    '  <atom:link href="' + escapeXml(siteUrl + '/feed.xml') + '" rel="self" type="application/rss+xml"/>',
+    rows,
+    '</channel>',
+    '</rss>'
+  ].join('\n');
+}
+
+function renderArticlesFeed(articles) {
+  const siteUrl = getSiteUrl();
+  const now = new Date().toUTCString();
   const items = articles.map(function(a) {
     return [
       '  <item>',
       '    <title>' + escapeXml(a.title) + '</title>',
       '    <link>' + siteUrl + '/articles/' + a.slug + '/</link>',
-      '    <guid>' + siteUrl + '/articles/' + a.slug + '/</guid>',
+      '    <guid isPermaLink="true">' + siteUrl + '/articles/' + a.slug + '/</guid>',
       '    <pubDate>' + new Date(a.date).toUTCString() + '</pubDate>',
+      '    <category>ChatAd Land editorial</category>',
       '    <description>' + escapeXml(a.summary || '') + '</description>',
       '  </item>'
     ].join('\n');
@@ -419,11 +507,14 @@ function renderFeed(articles) {
 
   return [
     '<?xml version="1.0" encoding="UTF-8"?>',
-    '<rss version="2.0">',
+    '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">',
     '<channel>',
-    '  <title>' + escapeXml(config.name) + '</title>',
-    '  <link>' + siteUrl + '</link>',
+    '  <title>' + escapeXml(config.name + ' | Articles') + '</title>',
+    '  <link>' + escapeXml(siteUrl + '/') + '</link>',
     '  <description>' + escapeXml(config.tagline) + '</description>',
+    '  <language>en-us</language>',
+    '  <lastBuildDate>' + now + '</lastBuildDate>',
+    '  <atom:link href="' + escapeXml(siteUrl + '/articles.xml') + '" rel="self" type="application/rss+xml"/>',
     items,
     '</channel>',
     '</rss>'
@@ -443,7 +534,8 @@ function renderRobots() {
 function renderRedirects() {
   return [
     '/rss.xml /feed.xml 301',
-    '/feed /feed.xml 301'
+    '/feed /feed.xml 301',
+    '/articles.rss /articles.xml 301'
   ].join('\n');
 }
 
@@ -476,12 +568,17 @@ function renderSitemap(articles) {
 
 async function main() {
   const articles = loadArticles();
-  const trendingItems = await fetchTrendingAtBuild();
+  const industryItems = await fetchIndustryContextAtBuild();
+  const trendingItems = industryItems.map(function(it) {
+    return { title: it.title, link: it.link };
+  }).slice(0, 6);
+  console.log('  industry context headlines at build: ' + industryItems.length);
   console.log('  trending headlines at build: ' + trendingItems.length);
 
   fs.writeFileSync(path.join(distDir, 'index.html'), renderHome(articles, trendingItems));
   fs.writeFileSync(path.join(distDir, 'about.html'), renderAbout());
-  fs.writeFileSync(path.join(distDir, 'feed.xml'), renderFeed(articles));
+  fs.writeFileSync(path.join(distDir, 'articles.xml'), renderArticlesFeed(articles));
+  fs.writeFileSync(path.join(distDir, 'feed.xml'), renderContextFeed(industryItems));
   fs.writeFileSync(path.join(distDir, 'robots.txt'), renderRobots());
   fs.writeFileSync(path.join(distDir, 'sitemap.xml'), renderSitemap(articles));
   fs.writeFileSync(path.join(distDir, '_redirects'), renderRedirects());
@@ -500,9 +597,24 @@ async function main() {
   const rssSources = JSON.stringify(config.rssSources || (config.rssSource ? [config.rssSource] : []));
   const trendingTemplate = fs.readFileSync(path.join(__dirname, 'trending-template.js'), 'utf8');
   const trendingFn = trendingTemplate.replace('__SOURCES__', rssSources);
-
   fs.writeFileSync(path.join(functionsDir, 'trending.js'), trendingFn);
-  console.log('  + functions/trending.js (sources: ' + rssSources + ')');
+
+  const feedDesc = JSON.stringify(
+    config.contextFeedDescription ||
+      'White-hat industry headlines in SEO, GEO, AEO, and AdTech. Links to original publishers only.'
+  );
+  const contextTemplate = fs.readFileSync(path.join(__dirname, 'context-feed-template.js'), 'utf8');
+  const contextFn = contextTemplate
+    .replace('__SOURCES__', rssSources)
+    .replace('__SITE_URL__', JSON.stringify(getSiteUrl()))
+    .replace('__SITE_NAME__', JSON.stringify(config.name))
+    .replace('__FEED_DESC__', feedDesc);
+  const feedFnDir = path.join(functionsDir, 'feed.xml');
+  fs.mkdirSync(feedFnDir, { recursive: true });
+  fs.writeFileSync(path.join(feedFnDir, 'index.js'), contextFn);
+
+  console.log('  + functions/trending.js, functions/feed.xml/index.js (sources: ' + rssSources + ')');
+  console.log('  + feed.xml (industry context), articles.xml (editorial)');
   console.log('  + robots.txt, sitemap.xml, _redirects');
 }
 

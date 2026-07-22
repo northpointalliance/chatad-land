@@ -4,6 +4,7 @@
   "publishCadence": "New AI-labeled articles every Tuesday and Thursday.",
   "tagline": "Insights into SEO, GEO, and AEO for the AI search era.",
   "niche": "adtech and AI search marketing",
+  "contextFeedDescription": "White-hat industry headlines in SEO, GEO, AEO, and AdTech. Each item links to the original publisher; ChatAd Land does not republish third-party full text.",
   "about": "ChatAd Land tracks the shift from search engines to answer engines: how AEO, GEO, and contextual ad placement work now that people ask AI instead of Googling. Published by IsraeliLeads.",
   "rssSources": [
     "https://news.google.com/rss/search?q=AEO+GEO+SEO+generative+engine+optimization+when:3d&hl=en-US&gl=US&ceid=US:en",

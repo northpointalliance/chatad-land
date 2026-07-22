@@ -1,43 +1,120 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
-  <title>ChatAd Land</title>
-  <link>https://chatad-land-ekx.pages.dev</link>
-  <description>Insights into SEO, GEO, and AEO for the AI search era.</description>
+  <title>ChatAd Land | White Hat GEO/SEO/AEO Context</title>
+  <link>https://chatad-land-ekx.pages.dev/</link>
+  <description>White-hat industry headlines in SEO, GEO, AEO, and AdTech. Each item links to the original publisher; ChatAd Land does not republish third-party full text.</description>
+  <language>en-us</language>
+  <lastBuildDate>Wed, 22 Jul 2026 16:18:24 GMT</lastBuildDate>
+  <generator>ChatAd Land context feed</generator>
+  <atom:link href="https://chatad-land-ekx.pages.dev/feed.xml" rel="self" type="application/rss+xml"/>
   <item>
-    <title>Why Does View-Source Still Decide GEO When Your CMS Looks Fine in Chrome?</title>
-    <link>https://chatad-land-ekx.pages.dev/articles/why-view-source-still-decides-geo-static-html-checklist/</link>
-    <guid>https://chatad-land-ekx.pages.dev/articles/why-view-source-still-decides-geo-static-html-checklist/</guid>
-    <pubDate>Tue, 28 Jul 2026 00:00:00 GMT</pubDate>
-    <description>LLM crawlers and answer engines read raw HTML, not your hydrated React tree. Here is a static-first checklist for SEO, GEO, and AEO on Cloudflare Pages.</description>
+    <title>5 Ways Generative Engine Optimization Services Improve Existing SEO Content for LLMs - North Forty News</title>
+    <link>https://news.google.com/rss/articles/CBMixwFBVV95cUxPc3hUQnp5a25GaTdRcjBuRFNDbERjbkpvUklPdWRwWmtEWEJiakFKUUh0djM0cExubmt4bVlnY20wRWc1NjR1VVNUR2Y1cHdmbmwwWU4xdU9iSW5JVEN3bmhJRHJPdU5TQmh5T29ZVWtTdjNaQUNUdmlUa2FYb21xZTVCTVVES3lPbEhucWtjb2Z1UUw3amo2cmpKaXpkWEtQNm90c1F0TC1PNDh2bGlmRGVsRUlXLWJtZ09KN05XbmJXMGp6VWNZ?oc=5</link>
+    <guid isPermaLink="true">https://news.google.com/rss/articles/CBMixwFBVV95cUxPc3hUQnp5a25GaTdRcjBuRFNDbERjbkpvUklPdWRwWmtEWEJiakFKUUh0djM0cExubmt4bVlnY20wRWc1NjR1VVNUR2Y1cHdmbmwwWU4xdU9iSW5JVEN3bmhJRHJPdU5TQmh5T29ZVWtTdjNaQUNUdmlUa2FYb21xZTVCTVVES3lPbEhucWtjb2Z1UUw3amo2cmpKaXpkWEtQNm90c1F0TC1PNDh2bGlmRGVsRUlXLWJtZ09KN05XbmJXMGp6VWNZ?oc=5</guid>
+    <pubDate>Tue, 21 Jul 2026 17:59:32 GMT</pubDate>
+    <category>White hat context</category>
+    <description>&lt;a href=&quot;https://news.google.com/rss/articles/CBMixwFBVV95cUxPc3hUQnp5a25GaTdRcjBuRFNDbERjbkpvUklPdWRwWmtEWEJiakFKUUh0djM0cExubmt4bVlnY20wRWc1NjR1VVNUR2Y1cHdmbmwwWU4xdU9iSW5JVEN3bmhJRHJPdU5TQmh5T29ZVWtTdjNaQUNUdmlUa2FYb21xZTVCTVVES3lPbEhucWtjb2Z1UUw3amo2cmpKaXpkWEtQNm90c1F0TC1PND</description>
+    <source url="https://news.google.com/rss/articles/CBMixwFBVV95cUxPc3hUQnp5a25GaTdRcjBuRFNDbERjbkpvUklPdWRwWmtEWEJiakFKUUh0djM0cExubmt4bVlnY20wRWc1NjR1VVNUR2Y1cHdmbmwwWU4xdU9iSW5JVEN3bmhJRHJPdU5TQmh5T29ZVWtTdjNaQUNUdmlUa2FYb21xZTVCTVVES3lPbEhucWtjb2Z1UUw3amo2cmpKaXpkWEtQNm90c1F0TC1PNDh2bGlmRGVsRUlXLWJtZ09KN05XbmJXMGp6VWNZ?oc=5">North Forty News</source>
   </item>
   <item>
-    <title>Does ChatGPT Ignore Your Google Rankings? What a 320-Query Citation Study Actually Shows</title>
-    <link>https://chatad-land-ekx.pages.dev/articles/does-chatgpt-ignore-google-rankings-citelens-citation-study/</link>
-    <guid>https://chatad-land-ekx.pages.dev/articles/does-chatgpt-ignore-google-rankings-citelens-citation-study/</guid>
-    <pubDate>Fri, 24 Jul 2026 00:00:00 GMT</pubDate>
-    <description>CiteLens compared AI engine citations to Google and Bing top-10 results. Google AI Mode and Perplexity track SEO; ChatGPT barely does. Here is how to split your GEO strategy.</description>
+    <title>SEO HERO LTD Expands AI Search Optimization Services to Help Hong Kong Businesses Stay Visible in the Era of AI-Powered Search - StreetInsider</title>
+    <link>https://news.google.com/rss/articles/CBMikwJBVV95cUxQLURtZGN2ZmFsOUhKSnROYlNfTmxTZTFaaXBlQlNKTXpUTkVUalRQdVg2b3JpTHhYWDZpMXMtcTZiQXR4QTF5eDdtTWNtZWt3SmlFaFZuQzctVThtb1ZfY0hSX05jNHlvbkwzSkpXZDJxUlhUZVR5dE9rVGJSLXFONjVIU0FtZ0pUalZaRHNJazZ1NERhWmZLNk0wS2IwemhFa01YRVBCRTlOblNrT2JKLUpmMjJrT2JtT0tQUVR1emVsdTh2NXBDOEhxUHhFZTJMUlhsOHlyWmhVaVpqMUdIckdGTkRxcjdxQWlIRFU0Q0tIZzh5QUhfUklycHZKYnBmSHpkazJlOVBaenI4MVJIUG9ZMA?oc=5</link>
+    <guid isPermaLink="true">https://news.google.com/rss/articles/CBMikwJBVV95cUxQLURtZGN2ZmFsOUhKSnROYlNfTmxTZTFaaXBlQlNKTXpUTkVUalRQdVg2b3JpTHhYWDZpMXMtcTZiQXR4QTF5eDdtTWNtZWt3SmlFaFZuQzctVThtb1ZfY0hSX05jNHlvbkwzSkpXZDJxUlhUZVR5dE9rVGJSLXFONjVIU0FtZ0pUalZaRHNJazZ1NERhWmZLNk0wS2IwemhFa01YRVBCRTlOblNrT2JKLUpmMjJrT2JtT0tQUVR1emVsdTh2NXBDOEhxUHhFZTJMUlhsOHlyWmhVaVpqMUdIckdGTkRxcjdxQWlIRFU0Q0tIZzh5QUhfUklycHZKYnBmSHpkazJlOVBaenI4MVJIUG9ZMA?oc=5</guid>
+    <pubDate>Mon, 20 Jul 2026 02:15:27 GMT</pubDate>
+    <category>White hat context</category>
+    <description>&lt;a href=&quot;https://news.google.com/rss/articles/CBMikwJBVV95cUxQLURtZGN2ZmFsOUhKSnROYlNfTmxTZTFaaXBlQlNKTXpUTkVUalRQdVg2b3JpTHhYWDZpMXMtcTZiQXR4QTF5eDdtTWNtZWt3SmlFaFZuQzctVThtb1ZfY0hSX05jNHlvbkwzSkpXZDJxUlhUZVR5dE9rVGJSLXFONjVIU0FtZ0pUalZaRHNJazZ1NERhWmZLNk0wS2IwemhFa01YRVBCRTlObl</description>
+    <source url="https://news.google.com/rss/articles/CBMikwJBVV95cUxQLURtZGN2ZmFsOUhKSnROYlNfTmxTZTFaaXBlQlNKTXpUTkVUalRQdVg2b3JpTHhYWDZpMXMtcTZiQXR4QTF5eDdtTWNtZWt3SmlFaFZuQzctVThtb1ZfY0hSX05jNHlvbkwzSkpXZDJxUlhUZVR5dE9rVGJSLXFONjVIU0FtZ0pUalZaRHNJazZ1NERhWmZLNk0wS2IwemhFa01YRVBCRTlOblNrT2JKLUpmMjJrT2JtT0tQUVR1emVsdTh2NXBDOEhxUHhFZTJMUlhsOHlyWmhVaVpqMUdIckdGTkRxcjdxQWlIRFU0Q0tIZzh5QUhfUklycHZKYnBmSHpkazJlOVBaenI4MVJIUG9ZMA?oc=5">StreetInsider</source>
   </item>
   <item>
-    <title>What Is Convomargin (Stealth) and Why LLM Margin Tracking Matters for GEO Teams?</title>
-    <link>https://chatad-land-ekx.pages.dev/articles/what-is-convomargin-stealth-and-why-llm-margin-tracking-matters-for-geo-teams/</link>
-    <guid>https://chatad-land-ekx.pages.dev/articles/what-is-convomargin-stealth-and-why-llm-margin-tracking-matters-for-geo-teams/</guid>
-    <pubDate>Wed, 22 Jul 2026 00:00:00 GMT</pubDate>
-    <description>Convomargin is a stealth project from Prism Publication focused on LLM margin, not vanity usage charts. Here is why answer-engine teams need unit economics, not another dashboard.</description>
+    <title>SEO HERO LTD Expands AI Search Optimization Services to Help Hong Kong Businesses Stay Visible in the Era of AI-Powered Search - lincolnjournal.com</title>
+    <link>https://news.google.com/rss/articles/CBMirwJBVV95cUxPc0pjVFhEcW1VUWNlMzBpay1SbU5JR2xoUDJvcEp1S2xVMGFFSmxjZFVFVUloRUFxQndVUmd2cTJRb3hyZkR4dWJmeE5ZSEx2dmZpOEpYcW9fM0g2SXNVbHNpYzFxaEZ0bnQ5RjZ6N1pnUFJ6WWJKWHp3SEVtNWpaQUVQWmRaWVFNLTZ3cDBwaC1EOEFWQ2VkZjhmRVctRWtIZUxSd28tN25Xc1Bya0Rua1F1d1lhcHp1XzMzejgzeXdTQzRRaGlCaHo4RWpNcUlROWtCNDcwWUVlc2hOdllxeEFoTzJET01iak02ZklJdE8xZjFSc3lmWWVZMDQ4T3I4WnY4dFZaUUl0aFZlWEUwaGZacm9MNHRGV3ZyNjZ6eW5tUk96Q0E2bnBoZmMtRjg?oc=5</link>
+    <guid isPermaLink="true">https://news.google.com/rss/articles/CBMirwJBVV95cUxPc0pjVFhEcW1VUWNlMzBpay1SbU5JR2xoUDJvcEp1S2xVMGFFSmxjZFVFVUloRUFxQndVUmd2cTJRb3hyZkR4dWJmeE5ZSEx2dmZpOEpYcW9fM0g2SXNVbHNpYzFxaEZ0bnQ5RjZ6N1pnUFJ6WWJKWHp3SEVtNWpaQUVQWmRaWVFNLTZ3cDBwaC1EOEFWQ2VkZjhmRVctRWtIZUxSd28tN25Xc1Bya0Rua1F1d1lhcHp1XzMzejgzeXdTQzRRaGlCaHo4RWpNcUlROWtCNDcwWUVlc2hOdllxeEFoTzJET01iak02ZklJdE8xZjFSc3lmWWVZMDQ4T3I4WnY4dFZaUUl0aFZlWEUwaGZacm9MNHRGV3ZyNjZ6eW5tUk96Q0E2bnBoZmMtRjg?oc=5</guid>
+    <pubDate>Sun, 19 Jul 2026 21:56:45 GMT</pubDate>
+    <category>White hat context</category>
+    <description>&lt;a href=&quot;https://news.google.com/rss/articles/CBMirwJBVV95cUxPc0pjVFhEcW1VUWNlMzBpay1SbU5JR2xoUDJvcEp1S2xVMGFFSmxjZFVFVUloRUFxQndVUmd2cTJRb3hyZkR4dWJmeE5ZSEx2dmZpOEpYcW9fM0g2SXNVbHNpYzFxaEZ0bnQ5RjZ6N1pnUFJ6WWJKWHp3SEVtNWpaQUVQWmRaWVFNLTZ3cDBwaC1EOEFWQ2VkZjhmRVctRWtIZUxSd28tN25Xc1</description>
+    <source url="https://news.google.com/rss/articles/CBMirwJBVV95cUxPc0pjVFhEcW1VUWNlMzBpay1SbU5JR2xoUDJvcEp1S2xVMGFFSmxjZFVFVUloRUFxQndVUmd2cTJRb3hyZkR4dWJmeE5ZSEx2dmZpOEpYcW9fM0g2SXNVbHNpYzFxaEZ0bnQ5RjZ6N1pnUFJ6WWJKWHp3SEVtNWpaQUVQWmRaWVFNLTZ3cDBwaC1EOEFWQ2VkZjhmRVctRWtIZUxSd28tN25Xc1Bya0Rua1F1d1lhcHp1XzMzejgzeXdTQzRRaGlCaHo4RWpNcUlROWtCNDcwWUVlc2hOdllxeEFoTzJET01iak02ZklJdE8xZjFSc3lmWWVZMDQ4T3I4WnY4dFZaUUl0aFZlWEUwaGZacm9MNHRGV3ZyNjZ6eW5tUk96Q0E2bnBoZmMtRjg?oc=5">lincolnjournal.com</source>
   </item>
   <item>
-    <title>How Do You Measure LLM Costs When GEO and AEO Become Your Content Engine?</title>
-    <link>https://chatad-land-ekx.pages.dev/articles/how-do-you-measure-llm-costs-when-geo-and-aeo-become-your-content-engine/</link>
-    <guid>https://chatad-land-ekx.pages.dev/articles/how-do-you-measure-llm-costs-when-geo-and-aeo-become-your-content-engine/</guid>
-    <pubDate>Tue, 21 Jul 2026 00:00:00 GMT</pubDate>
-    <description>Answer-engine workflows burn tokens on drafts, embeddings, evals, and rewrites, not just chat. Here is a plain-text cost model GEO teams can actually budget against.</description>
+    <title>What If AI Search Cites You — and Still Gets You Wrong? - CMSWire</title>
+    <link>https://news.google.com/rss/articles/CBMingFBVV95cUxNN3hibk1XSWU3dDhLZHo2c01Pd1JBckNnMDVYLWtsdGpadnp1bV9zMlpDeEQyNU9QXzBDN1BJZUthYmRYV0hrQlNiNjdCSVo5MkJQNF9fUWVjbmJGSnhDNnpHX0E5QmRkZWpMTHVuQUJzdG5ROXJJS2h3MW5zSmpwUUpYZUFER1FNc01iY0Q4OG9IZHRONlg5cnVXcnhNQQ?oc=5</link>
+    <guid isPermaLink="true">https://news.google.com/rss/articles/CBMingFBVV95cUxNN3hibk1XSWU3dDhLZHo2c01Pd1JBckNnMDVYLWtsdGpadnp1bV9zMlpDeEQyNU9QXzBDN1BJZUthYmRYV0hrQlNiNjdCSVo5MkJQNF9fUWVjbmJGSnhDNnpHX0E5QmRkZWpMTHVuQUJzdG5ROXJJS2h3MW5zSmpwUUpYZUFER1FNc01iY0Q4OG9IZHRONlg5cnVXcnhNQQ?oc=5</guid>
+    <pubDate>Mon, 20 Jul 2026 14:25:21 GMT</pubDate>
+    <category>White hat context</category>
+    <description>&lt;a href=&quot;https://news.google.com/rss/articles/CBMingFBVV95cUxNN3hibk1XSWU3dDhLZHo2c01Pd1JBckNnMDVYLWtsdGpadnp1bV9zMlpDeEQyNU9QXzBDN1BJZUthYmRYV0hrQlNiNjdCSVo5MkJQNF9fUWVjbmJGSnhDNnpHX0E5QmRkZWpMTHVuQUJzdG5ROXJJS2h3MW5zSmpwUUpYZUFER1FNc01iY0Q4OG9IZHRONlg5cnVXcnhNQQ?oc=5&quot; target=&quot;_</description>
+    <source url="https://news.google.com/rss/articles/CBMingFBVV95cUxNN3hibk1XSWU3dDhLZHo2c01Pd1JBckNnMDVYLWtsdGpadnp1bV9zMlpDeEQyNU9QXzBDN1BJZUthYmRYV0hrQlNiNjdCSVo5MkJQNF9fUWVjbmJGSnhDNnpHX0E5QmRkZWpMTHVuQUJzdG5ROXJJS2h3MW5zSmpwUUpYZUFER1FNc01iY0Q4OG9IZHRONlg5cnVXcnhNQQ?oc=5">CMSWire</source>
   </item>
   <item>
-    <title>iCrowd Is Selling AEO Press Releases Now. Here&apos;s What That Actually Buys You.</title>
-    <link>https://chatad-land-ekx.pages.dev/articles/icrowd-is-selling-aeo-press-releases-now-here-s-what-that-actually-buys-you/</link>
-    <guid>https://chatad-land-ekx.pages.dev/articles/icrowd-is-selling-aeo-press-releases-now-here-s-what-that-actually-buys-you/</guid>
-    <pubDate>Fri, 17 Jul 2026 00:00:00 GMT</pubDate>
-    <description>A wire-distribution vendor added AEO and GEO to its press release pitch this week. The useful part is distribution discipline; the risky part is treating syndication like citation engineering.</description>
+    <title>B2B enterprises are missing from AI answers despite strong organic rankings, NEWMEDIA.COM analysis finds - MarketScale</title>
+    <link>https://news.google.com/rss/articles/CBMi8AFBVV95cUxNdkh0REZPX2tjb2QyLW4wb2JUcGluREF1ZF9QQW5GbEFGN3RlbFN1RkRpVEdvRXlmdWNYQllxenNVdzRBN2h3Y2VqeURGTGs5ZzFTaTh1SUVIOU1fMzdza0NLX0JReTl0bHE1RHR2cFIxU3dJMVc1Z3FzSWVra3FIWmp0ell6ZzNxTzFHbGd2WXZoRTVCQUktWFI1d3A0WjB5V3hZbjh4WjR6R2tnWElNeFZQSFo5bkhhMTE0N3lVaEl3Sjg1QVhqaXFuUmlDNTBZajFpTC1wVjdEelhjeDUzQ2FWOHNzZzBmX2hTWWlFRjY?oc=5</link>
+    <guid isPermaLink="true">https://news.google.com/rss/articles/CBMi8AFBVV95cUxNdkh0REZPX2tjb2QyLW4wb2JUcGluREF1ZF9QQW5GbEFGN3RlbFN1RkRpVEdvRXlmdWNYQllxenNVdzRBN2h3Y2VqeURGTGs5ZzFTaTh1SUVIOU1fMzdza0NLX0JReTl0bHE1RHR2cFIxU3dJMVc1Z3FzSWVra3FIWmp0ell6ZzNxTzFHbGd2WXZoRTVCQUktWFI1d3A0WjB5V3hZbjh4WjR6R2tnWElNeFZQSFo5bkhhMTE0N3lVaEl3Sjg1QVhqaXFuUmlDNTBZajFpTC1wVjdEelhjeDUzQ2FWOHNzZzBmX2hTWWlFRjY?oc=5</guid>
+    <pubDate>Mon, 20 Jul 2026 00:09:00 GMT</pubDate>
+    <category>White hat context</category>
+    <description>&lt;a href=&quot;https://news.google.com/rss/articles/CBMi8AFBVV95cUxNdkh0REZPX2tjb2QyLW4wb2JUcGluREF1ZF9QQW5GbEFGN3RlbFN1RkRpVEdvRXlmdWNYQllxenNVdzRBN2h3Y2VqeURGTGs5ZzFTaTh1SUVIOU1fMzdza0NLX0JReTl0bHE1RHR2cFIxU3dJMVc1Z3FzSWVra3FIWmp0ell6ZzNxTzFHbGd2WXZoRTVCQUktWFI1d3A0WjB5V3hZbjh4WjR6R2</description>
+    <source url="https://news.google.com/rss/articles/CBMi8AFBVV95cUxNdkh0REZPX2tjb2QyLW4wb2JUcGluREF1ZF9QQW5GbEFGN3RlbFN1RkRpVEdvRXlmdWNYQllxenNVdzRBN2h3Y2VqeURGTGs5ZzFTaTh1SUVIOU1fMzdza0NLX0JReTl0bHE1RHR2cFIxU3dJMVc1Z3FzSWVra3FIWmp0ell6ZzNxTzFHbGd2WXZoRTVCQUktWFI1d3A0WjB5V3hZbjh4WjR6R2tnWElNeFZQSFo5bkhhMTE0N3lVaEl3Sjg1QVhqaXFuUmlDNTBZajFpTC1wVjdEelhjeDUzQ2FWOHNzZzBmX2hTWWlFRjY?oc=5">MarketScale</source>
+  </item>
+  <item>
+    <title>Jonah Launches its New Blog Builder Product Designed to Amplify GEO Strategies in Multifamily. - Yahoo Finance</title>
+    <link>https://news.google.com/rss/articles/CBMinAFBVV95cUxNWXc3THBCakV4ZVJCUmxwTjJXdnV5QnJfU1FsVnhJck5PWTlzRjhQckNzOGp1dVJ1RlduYnlWcDJFZzFhQVo4OEM0ZzZsRFpRanhjdi1JRzJpbDFUemE3dHRaSkhjVHFBcTVqMzJpTlFmS2wwN0dqX3NZYjlSYVRZcG1DUXVIZkxjVUh6d2ZFV01VU3ctWmhlTGowZW4?oc=5</link>
+    <guid isPermaLink="true">https://news.google.com/rss/articles/CBMinAFBVV95cUxNWXc3THBCakV4ZVJCUmxwTjJXdnV5QnJfU1FsVnhJck5PWTlzRjhQckNzOGp1dVJ1RlduYnlWcDJFZzFhQVo4OEM0ZzZsRFpRanhjdi1JRzJpbDFUemE3dHRaSkhjVHFBcTVqMzJpTlFmS2wwN0dqX3NZYjlSYVRZcG1DUXVIZkxjVUh6d2ZFV01VU3ctWmhlTGowZW4?oc=5</guid>
+    <pubDate>Wed, 22 Jul 2026 04:32:00 GMT</pubDate>
+    <category>White hat context</category>
+    <description>&lt;a href=&quot;https://news.google.com/rss/articles/CBMinAFBVV95cUxNWXc3THBCakV4ZVJCUmxwTjJXdnV5QnJfU1FsVnhJck5PWTlzRjhQckNzOGp1dVJ1RlduYnlWcDJFZzFhQVo4OEM0ZzZsRFpRanhjdi1JRzJpbDFUemE3dHRaSkhjVHFBcTVqMzJpTlFmS2wwN0dqX3NZYjlSYVRZcG1DUXVIZkxjVUh6d2ZFV01VU3ctWmhlTGowZW4?oc=5&quot; target=&quot;_bla</description>
+    <source url="https://news.google.com/rss/articles/CBMinAFBVV95cUxNWXc3THBCakV4ZVJCUmxwTjJXdnV5QnJfU1FsVnhJck5PWTlzRjhQckNzOGp1dVJ1RlduYnlWcDJFZzFhQVo4OEM0ZzZsRFpRanhjdi1JRzJpbDFUemE3dHRaSkhjVHFBcTVqMzJpTlFmS2wwN0dqX3NZYjlSYVRZcG1DUXVIZkxjVUh6d2ZFV01VU3ctWmhlTGowZW4?oc=5">Yahoo Finance</source>
+  </item>
+  <item>
+    <title>Elite Site Optimizer Launches AI Tools Suite and AI Readiness Audit for the Next Generation of Search - AiThority</title>
+    <link>https://news.google.com/rss/articles/CBMi2AFBVV95cUxQZXZQeTRvZlZRU2UxVnA5WC1hVVRUN18yYjktWGphSndFTHowVmxOeHpFTW4yWUNLS1dFWTlwalg1QnBXdURJSXAwa2tXbVhyMUpNWDg4RUxRRUpDblNXVDM3RnRjYmlTcHVUUjg2X3FnUDFFdVQtclJWckYxWlZzREdDSEhDbWtEbVBXbGpnUjF1a2xsZ18yckFsNlllRWZvZXhOODNzQlFTUzQtWU5kbzhlWkZIQ2Y1cHZkY3hEY19OMG0tR3dEY1NJN2JyelBFemM0QTBoY08?oc=5</link>
+    <guid isPermaLink="true">https://news.google.com/rss/articles/CBMi2AFBVV95cUxQZXZQeTRvZlZRU2UxVnA5WC1hVVRUN18yYjktWGphSndFTHowVmxOeHpFTW4yWUNLS1dFWTlwalg1QnBXdURJSXAwa2tXbVhyMUpNWDg4RUxRRUpDblNXVDM3RnRjYmlTcHVUUjg2X3FnUDFFdVQtclJWckYxWlZzREdDSEhDbWtEbVBXbGpnUjF1a2xsZ18yckFsNlllRWZvZXhOODNzQlFTUzQtWU5kbzhlWkZIQ2Y1cHZkY3hEY19OMG0tR3dEY1NJN2JyelBFemM0QTBoY08?oc=5</guid>
+    <pubDate>Tue, 21 Jul 2026 14:25:04 GMT</pubDate>
+    <category>White hat context</category>
+    <description>&lt;a href=&quot;https://news.google.com/rss/articles/CBMi2AFBVV95cUxQZXZQeTRvZlZRU2UxVnA5WC1hVVRUN18yYjktWGphSndFTHowVmxOeHpFTW4yWUNLS1dFWTlwalg1QnBXdURJSXAwa2tXbVhyMUpNWDg4RUxRRUpDblNXVDM3RnRjYmlTcHVUUjg2X3FnUDFFdVQtclJWckYxWlZzREdDSEhDbWtEbVBXbGpnUjF1a2xsZ18yckFsNlllRWZvZXhOODNzQlFTUz</description>
+    <source url="https://news.google.com/rss/articles/CBMi2AFBVV95cUxQZXZQeTRvZlZRU2UxVnA5WC1hVVRUN18yYjktWGphSndFTHowVmxOeHpFTW4yWUNLS1dFWTlwalg1QnBXdURJSXAwa2tXbVhyMUpNWDg4RUxRRUpDblNXVDM3RnRjYmlTcHVUUjg2X3FnUDFFdVQtclJWckYxWlZzREdDSEhDbWtEbVBXbGpnUjF1a2xsZ18yckFsNlllRWZvZXhOODNzQlFTUzQtWU5kbzhlWkZIQ2Y1cHZkY3hEY19OMG0tR3dEY1NJN2JyelBFemM0QTBoY08?oc=5">AiThority</source>
+  </item>
+  <item>
+    <title>Your Biggest Reputation Risk Isn`t a Bad Headline — It`s an Algorithm - Media Update</title>
+    <link>https://news.google.com/rss/articles/CBMiswFBVV95cUxPOUxHSFM3VnFZWlJNcDkwTE5pRDZFSnNEZ2ExSVhJZllaQjlLNl9uNmwyQ3A5eHFfeTFiZnZQbFFrLWZqQlowampZazB1STFMb2lFZFNsWnBNQ1V0WDZSRnExaXhGVktHWVJvMnF0YWZtdTVHbG02Y1dxTHlabkpDVEJuVERMRThGSE1CbkZlbHlfal8yMjZPcW83RmJOQ2RIQVo3Z1dqYzF2eEJoZXd2ZDhSQQ?oc=5</link>
+    <guid isPermaLink="true">https://news.google.com/rss/articles/CBMiswFBVV95cUxPOUxHSFM3VnFZWlJNcDkwTE5pRDZFSnNEZ2ExSVhJZllaQjlLNl9uNmwyQ3A5eHFfeTFiZnZQbFFrLWZqQlowampZazB1STFMb2lFZFNsWnBNQ1V0WDZSRnExaXhGVktHWVJvMnF0YWZtdTVHbG02Y1dxTHlabkpDVEJuVERMRThGSE1CbkZlbHlfal8yMjZPcW83RmJOQ2RIQVo3Z1dqYzF2eEJoZXd2ZDhSQQ?oc=5</guid>
+    <pubDate>Mon, 20 Jul 2026 10:00:00 GMT</pubDate>
+    <category>White hat context</category>
+    <description>&lt;a href=&quot;https://news.google.com/rss/articles/CBMiswFBVV95cUxPOUxHSFM3VnFZWlJNcDkwTE5pRDZFSnNEZ2ExSVhJZllaQjlLNl9uNmwyQ3A5eHFfeTFiZnZQbFFrLWZqQlowampZazB1STFMb2lFZFNsWnBNQ1V0WDZSRnExaXhGVktHWVJvMnF0YWZtdTVHbG02Y1dxTHlabkpDVEJuVERMRThGSE1CbkZlbHlfal8yMjZPcW83RmJOQ2RIQVo3Z1dqYzF2eE</description>
+    <source url="https://news.google.com/rss/articles/CBMiswFBVV95cUxPOUxHSFM3VnFZWlJNcDkwTE5pRDZFSnNEZ2ExSVhJZllaQjlLNl9uNmwyQ3A5eHFfeTFiZnZQbFFrLWZqQlowampZazB1STFMb2lFZFNsWnBNQ1V0WDZSRnExaXhGVktHWVJvMnF0YWZtdTVHbG02Y1dxTHlabkpDVEJuVERMRThGSE1CbkZlbHlfal8yMjZPcW83RmJOQ2RIQVo3Z1dqYzF2eEJoZXd2ZDhSQQ?oc=5">Media Update</source>
+  </item>
+  <item>
+    <title>Podcast Programmatic Ad Sellers Bet Transcript Intelligence Will Unlock More Ad Dollars. - podcastnewsdaily.com</title>
+    <link>https://news.google.com/rss/articles/CBMihgJBVV95cUxNVkIwNWFFMlJTcFRZTkZSeFpfYk1tckZDaWRWM2d6a04td2VqVFNLRk1vUENXMjJCYmlCU3V5QVJQYXV3dWFzOE9JdG41dzVPcG5DTFdXNmVrQkkwNXlQYk0yX0x1WmdmRWQzLVNMVVlYWDN5ako3RGxQek5zdC13UVJ1MWpyTHFTRUpZTVhZNWNBNjhoU2VfbUE2V2pwMmt3U254Y2JmVHlZV0xoQ0VaQTVQVkxGZ0wzUVVya2ZJNjdkTm9SekZSclA4ZWNHVHNId2xQcG1XRFBjc25fVW5HWlpnNW9PSWM0SDdKRzkzM3liWTllRVZzYUI5TlBsOWtwYTl2NXpn?oc=5</link>
+    <guid isPermaLink="true">https://news.google.com/rss/articles/CBMihgJBVV95cUxNVkIwNWFFMlJTcFRZTkZSeFpfYk1tckZDaWRWM2d6a04td2VqVFNLRk1vUENXMjJCYmlCU3V5QVJQYXV3dWFzOE9JdG41dzVPcG5DTFdXNmVrQkkwNXlQYk0yX0x1WmdmRWQzLVNMVVlYWDN5ako3RGxQek5zdC13UVJ1MWpyTHFTRUpZTVhZNWNBNjhoU2VfbUE2V2pwMmt3U254Y2JmVHlZV0xoQ0VaQTVQVkxGZ0wzUVVya2ZJNjdkTm9SekZSclA4ZWNHVHNId2xQcG1XRFBjc25fVW5HWlpnNW9PSWM0SDdKRzkzM3liWTllRVZzYUI5TlBsOWtwYTl2NXpn?oc=5</guid>
+    <pubDate>Wed, 22 Jul 2026 15:45:00 GMT</pubDate>
+    <category>White hat context</category>
+    <description>&lt;a href=&quot;https://news.google.com/rss/articles/CBMihgJBVV95cUxNVkIwNWFFMlJTcFRZTkZSeFpfYk1tckZDaWRWM2d6a04td2VqVFNLRk1vUENXMjJCYmlCU3V5QVJQYXV3dWFzOE9JdG41dzVPcG5DTFdXNmVrQkkwNXlQYk0yX0x1WmdmRWQzLVNMVVlYWDN5ako3RGxQek5zdC13UVJ1MWpyTHFTRUpZTVhZNWNBNjhoU2VfbUE2V2pwMmt3U254Y2JmVHlZV0</description>
+    <source url="https://news.google.com/rss/articles/CBMihgJBVV95cUxNVkIwNWFFMlJTcFRZTkZSeFpfYk1tckZDaWRWM2d6a04td2VqVFNLRk1vUENXMjJCYmlCU3V5QVJQYXV3dWFzOE9JdG41dzVPcG5DTFdXNmVrQkkwNXlQYk0yX0x1WmdmRWQzLVNMVVlYWDN5ako3RGxQek5zdC13UVJ1MWpyTHFTRUpZTVhZNWNBNjhoU2VfbUE2V2pwMmt3U254Y2JmVHlZV0xoQ0VaQTVQVkxGZ0wzUVVya2ZJNjdkTm9SekZSclA4ZWNHVHNId2xQcG1XRFBjc25fVW5HWlpnNW9PSWM0SDdKRzkzM3liWTllRVZzYUI5TlBsOWtwYTl2NXpn?oc=5">podcastnewsdaily.com</source>
+  </item>
+  <item>
+    <title>JCDecaux expands programmatic DOOH across Latin America - marketingreport.one</title>
+    <link>https://news.google.com/rss/articles/CBMimAFBVV95cUxQVFctWWNHZzNoR01NanZqWU9CY3MyalVCY0s4VVFKeUhZQjhjYldwTTNidTZJR2dsQldDaUhOTE5kSktBSlBZWWszU3R6QkdWLXdJYnpTNk8xNFZBUkUta0swMEFzdWR5R19xS3pSUElONVhJaWVIQzRvZy1ReGl1eW1aR0tBdklKWHRGNTF5Rkkwa1pLV2ROUg?oc=5</link>
+    <guid isPermaLink="true">https://news.google.com/rss/articles/CBMimAFBVV95cUxQVFctWWNHZzNoR01NanZqWU9CY3MyalVCY0s4VVFKeUhZQjhjYldwTTNidTZJR2dsQldDaUhOTE5kSktBSlBZWWszU3R6QkdWLXdJYnpTNk8xNFZBUkUta0swMEFzdWR5R19xS3pSUElONVhJaWVIQzRvZy1ReGl1eW1aR0tBdklKWHRGNTF5Rkkwa1pLV2ROUg?oc=5</guid>
+    <pubDate>Tue, 21 Jul 2026 10:43:08 GMT</pubDate>
+    <category>White hat context</category>
+    <description>&lt;a href=&quot;https://news.google.com/rss/articles/CBMimAFBVV95cUxQVFctWWNHZzNoR01NanZqWU9CY3MyalVCY0s4VVFKeUhZQjhjYldwTTNidTZJR2dsQldDaUhOTE5kSktBSlBZWWszU3R6QkdWLXdJYnpTNk8xNFZBUkUta0swMEFzdWR5R19xS3pSUElONVhJaWVIQzRvZy1ReGl1eW1aR0tBdklKWHRGNTF5Rkkwa1pLV2ROUg?oc=5&quot; target=&quot;_blank&quot;&gt;J</description>
+    <source url="https://news.google.com/rss/articles/CBMimAFBVV95cUxQVFctWWNHZzNoR01NanZqWU9CY3MyalVCY0s4VVFKeUhZQjhjYldwTTNidTZJR2dsQldDaUhOTE5kSktBSlBZWWszU3R6QkdWLXdJYnpTNk8xNFZBUkUta0swMEFzdWR5R19xS3pSUElONVhJaWVIQzRvZy1ReGl1eW1aR0tBdklKWHRGNTF5Rkkwa1pLV2ROUg?oc=5">marketingreport.one</source>
+  </item>
+  <item>
+    <title>VDO.AI&apos;s Santosh Khandekar joins JioStar as director of entertainment pricing and digital ad products - Storyboard18</title>
+    <link>https://news.google.com/rss/articles/CBMi6AFBVV95cUxOVEFjTmNrUUl4dVljbk9rUTJER2dvTG1FS1dJcml3Q3dkb3IwSkdCZkpma0lBcFdBLXhSbU1nQ2ZuQjF6ZlZ3b3JDZjFySDZqeUZoUTM5YzVvSm9iQTJKdDdhckZUOTM0c1lISUo1SEJnS1lxQzdpVV90WngtOS1XQjBhTEhPdmlNaElRRThTUi1sQ29UVlNVWFByOUtjeWlOejMwMmMzdE43MWxDMFB0Y0FUYlVuSVpvbXlDdVN6R3BNejE3YzhSX0dQT0JyMHp3S2NQemJHYUpybnUtUmxybGpmaEFPZGp40gHuAUFVX3lxTFBKUkw1ZWYyYktybjFHMVNyeXRfTE1yRUtUMVhSWk5CamVHZHVOdTZBaHd6ZE9mcGF5MW5kYWZCSFpGYXJFdVB6aUNnbm43ekdHZzkzZ1kzcl9JLWFVVVY3UGtOVHdqWGU3QlNzM3A2T3MxOEtwMFIyQkpvVDRZUkd1Q2M3ZEhRMzlzYi11enROblFRbjZnS19zOS1yTTRoMnBpZ2NrWGEyZHRIaEdkUVc2WXNiaDRkUUtDajZOWVBTTHZHUWstZjQ0aDdFSHI1TW5IRy0yQS02MnU1b1luUFhPTmgyckw2cnVlX0tvd2c?oc=5</link>
+    <guid isPermaLink="true">https://news.google.com/rss/articles/CBMi6AFBVV95cUxOVEFjTmNrUUl4dVljbk9rUTJER2dvTG1FS1dJcml3Q3dkb3IwSkdCZkpma0lBcFdBLXhSbU1nQ2ZuQjF6ZlZ3b3JDZjFySDZqeUZoUTM5YzVvSm9iQTJKdDdhckZUOTM0c1lISUo1SEJnS1lxQzdpVV90WngtOS1XQjBhTEhPdmlNaElRRThTUi1sQ29UVlNVWFByOUtjeWlOejMwMmMzdE43MWxDMFB0Y0FUYlVuSVpvbXlDdVN6R3BNejE3YzhSX0dQT0JyMHp3S2NQemJHYUpybnUtUmxybGpmaEFPZGp40gHuAUFVX3lxTFBKUkw1ZWYyYktybjFHMVNyeXRfTE1yRUtUMVhSWk5CamVHZHVOdTZBaHd6ZE9mcGF5MW5kYWZCSFpGYXJFdVB6aUNnbm43ekdHZzkzZ1kzcl9JLWFVVVY3UGtOVHdqWGU3QlNzM3A2T3MxOEtwMFIyQkpvVDRZUkd1Q2M3ZEhRMzlzYi11enROblFRbjZnS19zOS1yTTRoMnBpZ2NrWGEyZHRIaEdkUVc2WXNiaDRkUUtDajZOWVBTTHZHUWstZjQ0aDdFSHI1TW5IRy0yQS02MnU1b1luUFhPTmgyckw2cnVlX0tvd2c?oc=5</guid>
+    <pubDate>Tue, 21 Jul 2026 03:51:59 GMT</pubDate>
+    <category>White hat context</category>
+    <description>&lt;a href=&quot;https://news.google.com/rss/articles/CBMi6AFBVV95cUxOVEFjTmNrUUl4dVljbk9rUTJER2dvTG1FS1dJcml3Q3dkb3IwSkdCZkpma0lBcFdBLXhSbU1nQ2ZuQjF6ZlZ3b3JDZjFySDZqeUZoUTM5YzVvSm9iQTJKdDdhckZUOTM0c1lISUo1SEJnS1lxQzdpVV90WngtOS1XQjBhTEhPdmlNaElRRThTUi1sQ29UVlNVWFByOUtjeWlOejMwMmMzdE43MW</description>
+    <source url="https://news.google.com/rss/articles/CBMi6AFBVV95cUxOVEFjTmNrUUl4dVljbk9rUTJER2dvTG1FS1dJcml3Q3dkb3IwSkdCZkpma0lBcFdBLXhSbU1nQ2ZuQjF6ZlZ3b3JDZjFySDZqeUZoUTM5YzVvSm9iQTJKdDdhckZUOTM0c1lISUo1SEJnS1lxQzdpVV90WngtOS1XQjBhTEhPdmlNaElRRThTUi1sQ29UVlNVWFByOUtjeWlOejMwMmMzdE43MWxDMFB0Y0FUYlVuSVpvbXlDdVN6R3BNejE3YzhSX0dQT0JyMHp3S2NQemJHYUpybnUtUmxybGpmaEFPZGp40gHuAUFVX3lxTFBKUkw1ZWYyYktybjFHMVNyeXRfTE1yRUtUMVhSWk5CamVHZHVOdTZBaHd6ZE9mcGF5MW5kYWZCSFpGYXJFdVB6aUNnbm43ekdHZzkzZ1kzcl9JLWFVVVY3UGtOVHdqWGU3QlNzM3A2T3MxOEtwMFIyQkpvVDRZUkd1Q2M3ZEhRMzlzYi11enROblFRbjZnS19zOS1yTTRoMnBpZ2NrWGEyZHRIaEdkUVc2WXNiaDRkUUtDajZOWVBTTHZHUWstZjQ0aDdFSHI1TW5IRy0yQS02MnU1b1luUFhPTmgyckw2cnVlX0tvd2c?oc=5">Storyboard18</source>
+  </item>
+  <item>
+    <title>Hidden Fees in Programmatic Advertising: Where Budgets Leak - Agency Reporter</title>
+    <link>https://news.google.com/rss/articles/CBMihgFBVV95cUxOT1FfalNhc2JzS1RtbGtYSmVISFpQbjNqcHRaMFgzMmtVdlRUdGlTOTVSZzJxOWdlcmFOeW0tTDJycThhNURCRUt3UFU0ZlZGWjVLN2x2eTZlZkNTOXFfclVKTndyUnFhY3ZXTVFzQ1Frbm55ZkQ2dGhSUGgzcmJhcUttbFowQQ?oc=5</link>
+    <guid isPermaLink="true">https://news.google.com/rss/articles/CBMihgFBVV95cUxOT1FfalNhc2JzS1RtbGtYSmVISFpQbjNqcHRaMFgzMmtVdlRUdGlTOTVSZzJxOWdlcmFOeW0tTDJycThhNURCRUt3UFU0ZlZGWjVLN2x2eTZlZkNTOXFfclVKTndyUnFhY3ZXTVFzQ1Frbm55ZkQ2dGhSUGgzcmJhcUttbFowQQ?oc=5</guid>
+    <pubDate>Tue, 21 Jul 2026 08:01:19 GMT</pubDate>
+    <category>White hat context</category>
+    <description>&lt;a href=&quot;https://news.google.com/rss/articles/CBMihgFBVV95cUxOT1FfalNhc2JzS1RtbGtYSmVISFpQbjNqcHRaMFgzMmtVdlRUdGlTOTVSZzJxOWdlcmFOeW0tTDJycThhNURCRUt3UFU0ZlZGWjVLN2x2eTZlZkNTOXFfclVKTndyUnFhY3ZXTVFzQ1Frbm55ZkQ2dGhSUGgzcmJhcUttbFowQQ?oc=5&quot; target=&quot;_blank&quot;&gt;Hidden Fees in Programmat</description>
+    <source url="https://news.google.com/rss/articles/CBMihgFBVV95cUxOT1FfalNhc2JzS1RtbGtYSmVISFpQbjNqcHRaMFgzMmtVdlRUdGlTOTVSZzJxOWdlcmFOeW0tTDJycThhNURCRUt3UFU0ZlZGWjVLN2x2eTZlZkNTOXFfclVKTndyUnFhY3ZXTVFzQ1Frbm55ZkQ2dGhSUGgzcmJhcUttbFowQQ?oc=5">Agency Reporter</source>
   </item>
 </channel>
 </rss>

@@ -73,7 +73,7 @@ function renderRss(items) {
     '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">',
     '<channel>',
     '  <title>' + escapeXml(SITE_NAME + ' | White Hat GEO/SEO/AEO Context') + '</title>',
-    '  <link>' + escapeXml(SITE_URL + '/') + '</link>',
+    '  <link>' + escapeXml(SITE_URL + '/industry-feed/') + '</link>',
     '  <description>' + escapeXml(FEED_DESC) + '</description>',
     '  <language>en-us</language>',
     '  <lastBuildDate>' + now + '</lastBuildDate>',

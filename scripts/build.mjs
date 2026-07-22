@@ -160,13 +160,14 @@ function extractRssItems(xml, max) {
     const pub = pubDateRe.exec(block);
     const desc = descRe.exec(block);
     const src = sourceRe.exec(block);
+    const rawDesc = desc
+      ? decodeXmlText(desc[1].replace('<![CDATA[', '').replace(']]>', '').trim())
+      : 'Third-party headline linked for white-hat context. Read the original source.';
     items.push({
       title,
       link,
       pubDate: pub ? pub[1].trim() : new Date().toUTCString(),
-      description: desc
-        ? decodeXmlText(desc[1].replace('<![CDATA[', '').replace(']]>', '').trim()).slice(0, 280)
-        : 'Third-party headline linked for white-hat context. Read the original source.',
+      description: stripHtml(rawDesc).slice(0, 280) || 'Third-party headline linked for white-hat context. Read the original source.',
       source: src ? decodeXmlText(src[1].trim()) : 'Industry'
     });
   }
@@ -180,6 +181,13 @@ function decodeXmlText(text) {
     .replace(/&amp;/g, '&')
     .replace(/&apos;/g, "'")
     .replace(/&quot;/g, '"');
+}
+
+function stripHtml(text) {
+  return decodeXmlText(String(text))
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
 }
 
 async function fetchIndustryContextAtBuild() {
@@ -333,9 +341,8 @@ function layout(opts) {
     '<nav>',
     '  <a class="logo" href="/">' + escapeHtml(config.name) + '</a>',
     '  <div class="nav-links">',
-    '    <a href="/">Articles</a>',
-    '    <a href="/feed.xml">Industry feed</a>',
-    '    <a href="/articles.xml">Articles</a>',
+    '    <a href="/">Home</a>',
+    '    <a href="/industry-feed/">Industry context</a>',
     '    <a href="/about.html">About</a>',
     '  </div>',
     '</nav>'
@@ -344,7 +351,7 @@ function layout(opts) {
   const footer = [
     '<footer>',
     '  <div>&copy; ' + new Date().getFullYear() + ' ' + escapeHtml(config.name) + '. Some links are affiliate links, see our <a href="/about.html#disclosure">disclosure</a>.</div>',
-    '  <div><a href="/about.html">About</a> &middot; <a href="/feed.xml">Industry feed</a> &middot; <a href="/articles.xml">Article RSS</a></div>',
+    '  <div><a href="/about.html">About</a> &middot; <a href="/industry-feed/">Industry context</a> &middot; <a href="/about.html#feeds">RSS feeds</a></div>',
     '  <div class="footer-company">Copyright 2026 Prism Publication &middot; Dr Enrico Fabrigat, Holon, Israel &middot; <a href="mailto:info@prismpublication.com">info@prismpublication.com</a></div>',
     '</footer>'
   ].join('\n');
@@ -428,6 +435,38 @@ function renderArticle(a) {
   });
 }
 
+function renderIndustryFeedPage(industryItems) {
+  const feedDesc = config.contextFeedDescription ||
+    'White-hat industry headlines in SEO, GEO, AEO, and AdTech. Links to original publishers only.';
+  const cards = industryItems.map(function(it) {
+    return [
+      '  <a class="article-card" href="' + escapeHtml(it.link) + '" target="_blank" rel="noopener noreferrer">',
+      '    <div class="article-title">' + escapeHtml(it.title) + '</div>',
+      '    <div class="article-meta"><span>' + escapeHtml(it.source) + '</span></div>',
+      it.description ? ('    <div class="article-summary">' + escapeHtml(it.description) + '</div>') : '',
+      '  </a>'
+    ].join('\n');
+  }).join('\n');
+
+  const content = [
+    '<div class="wrap">',
+    '  <div class="hero">',
+    '    <h1>Industry context</h1>',
+    '    <p>' + escapeHtml(feedDesc) + '</p>',
+    '    <p class="publish-cadence">Each headline opens the original publisher. For RSS readers and aggregators, subscribe at <a href="/feed.xml">/feed.xml</a> (machine-readable XML, not a web page).</p>',
+    '  </div>',
+    '  <div class="article-list">' + (cards || '<p style="padding:2rem 0;color:#6b7280;">Industry headlines refresh on each build.</p>') + '</div>',
+    '</div>'
+  ].join('\n');
+
+  return layout({
+    title: 'Industry context | ' + config.name,
+    description: feedDesc,
+    content: content,
+    canonicalPath: '/industry-feed/'
+  });
+}
+
 function renderAbout() {
   const cadenceBlock = config.publishCadence
     ? ('  <h2 id="schedule">Publishing schedule</h2>\n  <p>' + escapeHtml(config.publishCadence) + '</p>')
@@ -438,7 +477,8 @@ function renderAbout() {
     '  <p>' + escapeHtml(config.about || config.tagline) + '</p>',
     cadenceBlock,
     '  <h2 id="feeds">RSS feeds</h2>',
-    '  <p><strong><a href="/feed.xml">Industry feed</a></strong> (' + escapeHtml(config.contextFeedDescription || 'White-hat SEO, GEO, AEO, and AdTech headlines from third-party sources. Links only; we do not republish full articles.') + ')</p>',
+    '  <p><strong><a href="/industry-feed/">Industry context page</a></strong> (human-readable headlines from third-party SEO, GEO, AEO, and AdTech sources.)</p>',
+    '  <p><strong><a href="/feed.xml">Industry RSS</a></strong> (' + escapeHtml(config.contextFeedDescription || 'White-hat industry headlines. Links only; we do not republish third-party full text.') + ')</p>',
     '  <p><strong><a href="/articles.xml">Article RSS</a></strong> (ChatAd Land editorial posts only.)</p>',
     '  <h2 id="disclosure">Disclosure</h2>',
     '  <p>' + escapeHtml(config.name) + ' is an independent site. Some posts contain affiliate links, marked clearly where they appear. Articles marked "AI-written, human-reviewed" are drafted with AI assistance and reviewed by a human editor before publishing. We separate sponsored/affiliate content from editorial navigation, affiliate links never appear disguised as a site section.</p>',
@@ -477,7 +517,7 @@ function renderContextFeed(industryItems) {
     '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">',
     '<channel>',
     '  <title>' + escapeXml(config.name + ' | White Hat GEO/SEO/AEO Context') + '</title>',
-    '  <link>' + escapeXml(siteUrl + '/') + '</link>',
+    '  <link>' + escapeXml(siteUrl + '/industry-feed/') + '</link>',
     '  <description>' + escapeXml(feedDesc) + '</description>',
     '  <language>en-us</language>',
     '  <lastBuildDate>' + now + '</lastBuildDate>',
@@ -534,7 +574,8 @@ function renderRobots() {
 function renderRedirects() {
   return [
     '/rss.xml /feed.xml 301',
-    '/feed /feed.xml 301',
+    '/feed /industry-feed/ 301',
+    '/feed/ /industry-feed/ 301',
     '/articles.rss /articles.xml 301'
   ].join('\n');
 }
@@ -544,6 +585,7 @@ function renderSitemap(articles) {
   const today = new Date().toISOString().slice(0, 10);
   const urls = [
     { loc: siteUrl + '/', lastmod: today },
+    { loc: siteUrl + '/industry-feed/', lastmod: today },
     { loc: siteUrl + '/about.html', lastmod: today }
   ];
   for (const a of articles) {
@@ -577,6 +619,9 @@ async function main() {
 
   fs.writeFileSync(path.join(distDir, 'index.html'), renderHome(articles, trendingItems));
   fs.writeFileSync(path.join(distDir, 'about.html'), renderAbout());
+  const industryFeedDir = path.join(distDir, 'industry-feed');
+  fs.mkdirSync(industryFeedDir, { recursive: true });
+  fs.writeFileSync(path.join(industryFeedDir, 'index.html'), renderIndustryFeedPage(industryItems));
   fs.writeFileSync(path.join(distDir, 'articles.xml'), renderArticlesFeed(articles));
   fs.writeFileSync(path.join(distDir, 'feed.xml'), renderContextFeed(industryItems));
   fs.writeFileSync(path.join(distDir, 'robots.txt'), renderRobots());
